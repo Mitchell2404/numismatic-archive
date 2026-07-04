@@ -1,0 +1,96 @@
+<!DOCTYPE html><html class="light" lang="es"><head>
+<meta charset="utf-8">
+<title>Numismatic Archive - Acceso al Repositorio Real</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      colors: {
+        "background": "#fff8f2", "surface": "#fff8f2", "surface-container-low": "#fff2df",
+        "surface-container-lowest": "#ffffff", "surface-container": "#ffebcb",
+        "surface-variant": "#f3e0c0", "surface-dim": "#ebd8b8",
+        "on-surface": "#241a07", "on-surface-variant": "#44474f",
+        "primary": "#011e4b", "primary-container": "#1c3461", "on-primary": "#ffffff",
+        "secondary": "#785a00", "secondary-container": "#fed16c", "on-secondary": "#ffffff",
+        "secondary-fixed-dim": "#ecc15d", "on-secondary-container": "#775900",
+        "tertiary": "#2e1c01", "tertiary-container": "#463112",
+        "on-tertiary-fixed": "#291800", "on-tertiary-fixed-variant": "#5a4322",
+        "on-tertiary-container": "#b89871",
+        "outline": "#757780", "outline-variant": "#c4c6d0",
+        "error": "#ba1a1a", "surface-tint": "#485e8d"
+      },
+      borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" },
+      fontFamily: {
+        "headline-xl": ["Playfair Display"], "headline-lg": ["Playfair Display"],
+        "headline-md": ["Playfair Display"], "body-lg": ["Inter"], "body-md": ["Inter"],
+        "label-sm": ["JetBrains Mono"], "label-xs": ["JetBrains Mono"]
+      },
+      fontSize: {
+        "headline-xl": ["48px", {lineHeight:"1.1",letterSpacing:"-0.02em",fontWeight:"700"}],
+        "headline-lg": ["32px", {lineHeight:"1.2",fontWeight:"600"}],
+        "headline-md": ["24px", {lineHeight:"1.3",fontWeight:"600"}],
+        "body-lg": ["18px", {lineHeight:"1.6",fontWeight:"400"}],
+        "body-md": ["16px", {lineHeight:"1.5",fontWeight:"400"}],
+        "label-sm": ["12px", {lineHeight:"1.4",letterSpacing:"0.05em",fontWeight:"500"}],
+        "label-xs": ["10px", {lineHeight:"1.4",letterSpacing:"0.1em",fontWeight:"500"}]
+      }
+    }
+  }
+}
+</script>
+<style>
+body { background-color: #fff8f2; background-image: radial-gradient(circle at 50% 50%, rgba(255,248,242,0) 0%, rgba(235,216,184,0.2) 100%); overflow-x: hidden; }
+.material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+.parchment-folio { box-shadow: 0 10px 40px -10px rgba(0,0,0,0.1), inset 0 0 100px rgba(243,224,192,0.3); border: 1px solid #c8a96e; position: relative; }
+.parchment-folio::before { content: ''; position: absolute; top: 20px; bottom: 20px; left: 20px; right: 20px; border: 1px solid rgba(200,169,110,0.4); pointer-events: none; }
+.key-watermark { opacity: 0.05; filter: grayscale(1) sepia(1) contrast(1.2); pointer-events: none; user-select: none; }
+.input-inset { box-shadow: inset 0 2px 4px rgba(0,0,0,0.05); }
+.btn-hover-effect:active { transform: scale(0.98); }
+</style>
+</head>
+<body class="flex items-center justify-center min-h-screen p-4 font-body-md text-on-surface">
+<main class="parchment-folio bg-surface-container-lowest max-w-[600px] w-full mx-auto overflow-hidden rounded-lg p-12 md:p-16 flex flex-col items-center relative">
+  <div class="absolute top-6 left-8 font-label-xs text-on-tertiary-fixed-variant opacity-60">FOLIO No. CCXVI</div>
+  <div class="absolute top-6 right-8 font-label-xs text-on-tertiary-fixed-variant opacity-60">ARCHIVUM MDCCCXCIV</div>
+  <div class="mb-8 relative z-10 flex flex-col items-center">
+    <img alt="An ancient, ornate iron key" class="w-32 h-auto mb-4 opacity-90 drop-shadow-md" src="https://lh3.googleusercontent.com/aida/ADBb0ujHu6R-dW3uNrVVfIwhN0IV-U_5ZhPZTPTDJ40-bgP-Ah86a1nmCCE7y9wlo3-nmb5cVAqxl6giTJys_UCi9_a11wGYj3Tv5LFPnBIpBsbm2w8z_ogehkl_0oYvKb5cX4RLIk2aVGWbgYRmfvD4L0HHd2y4z7CdcUvG1oS1iWQr82RKmsazUhaKpG3TTbYAz99TVE34ceXEpSfLWxCtX1LkFJ30Y4q9YUwagpukU7NocMDJ-kP5-6nTx2I">
+    <h1 class="font-headline-xl text-primary text-center leading-tight">Acceso al Repositorio Real</h1>
+    <p class="font-body-md italic text-on-surface-variant text-center mt-2 max-w-xs">Ingrese sus credenciales para consultar el registro historico de numismatica soberana.</p>
+  </div>
+  <form class="w-full space-y-8 relative z-20">
+    <div class="space-y-2">
+      <label class="block font-label-sm text-secondary uppercase tracking-widest" for="identity">Identidad del Erudito</label>
+      <div class="relative group">
+        <span class="absolute inset-y-0 left-4 flex items-center text-on-surface-variant opacity-50"><span class="material-symbols-outlined">person_outline</span></span>
+        <input class="w-full pl-12 pr-4 py-4 bg-surface-container-low border border-outline-variant focus:border-secondary focus:ring-1 focus:ring-secondary outline-none transition-all input-inset font-body-md rounded" id="identity" placeholder="erudito@archivo.org" required type="email">
+      </div>
+    </div>
+    <div class="space-y-2">
+      <div class="flex justify-between items-center">
+        <label class="block font-label-sm text-secondary uppercase tracking-widest" for="passphrase">Frase de Acceso</label>
+        <a class="font-label-xs text-primary hover:underline" href="#">Olvido su clave?</a>
+      </div>
+      <div class="relative group">
+        <span class="absolute inset-y-0 left-4 flex items-center text-on-surface-variant opacity-50"><span class="material-symbols-outlined">lock_open</span></span>
+        <input class="w-full pl-12 pr-4 py-4 bg-surface-container-low border border-outline-variant focus:border-secondary focus:ring-1 focus:ring-secondary outline-none transition-all input-inset font-body-md rounded" id="passphrase" placeholder="..." required type="password">
+      </div>
+    </div>
+    <div class="pt-4 flex flex-col items-center gap-6">
+      <button class="group relative flex flex-col items-center justify-center btn-hover-effect hover:scale-105 transition-transform duration-300" type="submit">
+        <div class="relative w-28 h-28 flex items-center justify-center transition-transform duration-300 group-hover:rotate-12 animate-pulse shadow-[0_0_30px_rgba(120,90,0,0.3)] rounded-full">
+          <img alt="A deep red wax seal with an owl engraving" class="w-full h-full object-contain drop-shadow-xl" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_nNfSZFYZgu9TL1f4SOL4asRsWr7ul0S2lUrJeitx4O8GxkIacSNGNCKe7vrQ7fEs2pgo8v3oWWMCSBM0tYRZ_inMgHQPBVcXW7qQ_O-RHst_CCVmA7upavjiknVQy7Oadu3FoLLMJChuT3jfcHqzJKLT23O4tKUy4TALpyNot1HiEl2m_-pBtCMnJw3dcsrk8GnWiab9v4z6zcB9bbDcpe5bZlFogAKy8fXuFW-tr5i7IMo7Ger6hZOEtQQ15A_rg70M6i9Kc8c">
+        </div>
+        <span class="mt-2 font-label-sm tracking-widest uppercase opacity-80 group-hover:opacity-100 text-secondary-fixed-dim">Validar Entrada</span>
+      </button>
+    </div>
+  </form>
+  <div class="mt-16 pt-8 border-t border-outline-variant/30 w-full flex flex-col items-center gap-4">
+    <p class="font-body-md text-on-surface-variant">No posee un registro institucional?</p>
+    <a class="px-8 py-3 border border-secondary text-secondary font-label-sm uppercase tracking-widest hover:bg-secondary-container/20 transition-all rounded" href="#">REGISTRARTE</a>
+  </div>
+  <img alt="" class="key-watermark absolute bottom-[-40px] right-[-20px] w-64 h-auto transform rotate-45" src="https://lh3.googleusercontent.com/aida/ADBb0ujHu6R-dW3uNrVVfIwhN0IV-U_5ZhPZTPTDJ40-bgP-Ah86a1nmCCE7y9wlo3-nmb5cVAqxl6giTJys_UCi9_a11wGYj3Tv5LFPnBIpBsbm2w8z_ogehkl_0oYvKb5cX4RLIk2aVGWbgYRmfvD4L0HHd2y4z7CdcUvG1oS1iWQr82RKmsazUhaKpG3TTbYAz99TVE34ceXEpSfLWxCtX1LkFJ30Y4q9YUwagpukU7NocMDJ-kP5-6nTx2I">
+</main>
+</body></html>

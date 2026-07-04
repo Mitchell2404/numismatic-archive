@@ -1,0 +1,198 @@
+[
+  {
+    "id": 1,
+    "name": "Dr. Alistair Finch",
+    "role": "Curador Autenticado",
+    "initials": "AF",
+    "messages": [
+      {
+        "id": 1,
+        "type": "recv",
+        "text": "Buenos días. He completado la espectroscopia inicial del Tetradracma ateniense que envió. La cristalización de la superficie es consistente con un contexto de entierro del siglo II a.C.",
+        "time": "09:15 AM",
+        "date": "20 de Jun, 2026"
+      },
+      {
+        "id": 2,
+        "type": "sent",
+        "text": "Son excelentes noticias, Alistair. ¿Confirma esto la procedencia que discutimos respecto a la colección de Levante?",
+        "time": "09:22 AM",
+        "date": "20 de Jun, 2026"
+      },
+      {
+        "id": 3,
+        "type": "recv",
+        "text": "En efecto. Observe esta toma macroscópica del ojo del búho. El desplazamiento del cuño es una firma del Maestro de Egina.",
+        "time": "09:45 AM",
+        "date": "20 de Jun, 2026"
+      },
+      {
+        "id": 4,
+        "type": "sent",
+        "text": "Verdaderamente notable. Por favor, proceda con el papeleo formal de certificación. Iniciaré la transferencia de depósito para sus honorarios de consulta inmediatamente.",
+        "time": "09:48 AM",
+        "date": "20 de Jun, 2026"
+      },
+      {
+        "id": 1781973596419,
+        "type": "sent",
+        "text": "",
+        "time": "11:39 a. m.",
+        "date": "20 de junio de 2026",
+        "attachment": {
+          "url": "/api/images/messages/messages-1781973596357.jpeg",
+          "type": "image"
+        }
+      }
+    ],
+    "updatedAt": "2026-07-02T22:36:54.692Z"
+  },
+  {
+    "id": 2,
+    "name": "Eleanor Vance",
+    "role": "Agente de Depósito",
+    "initials": "EV",
+    "messages": [
+      {
+        "id": 1,
+        "type": "recv",
+        "text": "Estimado curador, le confirmo que el depósito por el Aureus de Augusto ha sido procesado.",
+        "time": "07:30 AM",
+        "date": "20 de Jun, 2026"
+      },
+      {
+        "id": 2,
+        "type": "sent",
+        "text": "Gracias Eleanor. Procederemos con la documentación de transferencia.",
+        "time": "07:45 AM",
+        "date": "20 de Jun, 2026"
+      },
+      {
+        "id": 1781980209966,
+        "type": "sent",
+        "text": "",
+        "time": "01:30 p. m.",
+        "date": "20 de junio de 2026",
+        "attachment": {
+          "url": "/api/images/messages/messages-1781980209927.webm",
+          "type": "audio"
+        }
+      },
+      {
+        "id": 1781980217650,
+        "type": "sent",
+        "text": "🔍",
+        "time": "01:30 p. m.",
+        "date": "20 de junio de 2026"
+      },
+      {
+        "id": 1783179926209,
+        "type": "sent",
+        "text": "",
+        "time": "10:45 a. m.",
+        "date": "04 de julio de 2026",
+        "attachment": {
+          "url": "/api/images/messages/messages-1783179926156.png",
+          "type": "image"
+        }
+      }
+    ],
+    "updatedAt": "2026-07-04T15:45:26.209Z"
+  },
+  {
+    "id": 3,
+    "name": "Sotheby's Heritage",
+    "role": "Casa de Subastas",
+    "initials": "SH",
+    "messages": [
+      {
+        "id": 1,
+        "type": "recv",
+        "text": "Sus papeles de certificación han sido aprobados por el comité de autenticidad.",
+        "time": "02:00 PM",
+        "date": "19 de Jun, 2026"
+      },
+      {
+        "id": 1781973612544,
+        "type": "sent",
+        "text": "",
+        "time": "11:40 a. m.",
+        "date": "20 de junio de 2026",
+        "attachment": {
+          "url": "/api/images/messages/messages-1781973612493.jpeg",
+          "type": "image"
+        }
+      },
+      {
+        "id": 1781973615752,
+        "type": "sent",
+        "text": "",
+        "time": "11:40 a. m.",
+        "date": "20 de junio de 2026",
+        "attachment": {
+          "url": "/api/images/messages/messages-1781973615708.jpeg",
+          "type": "image"
+        }
+      },
+      {
+        "id": 1781980148765,
+        "type": "sent",
+        "text": "😎",
+        "time": "01:29 p. m.",
+        "date": "20 de junio de 2026"
+      },
+      {
+        "id": 1781995501423,
+        "type": "sent",
+        "text": "",
+        "time": "05:45 p. m.",
+        "date": "20 de junio de 2026",
+        "attachment": {
+          "url": "/api/images/messages/messages-1781995501342.png",
+          "type": "image"
+        }
+      },
+      {
+        "id": 1781995517487,
+        "type": "sent",
+        "text": "",
+        "time": "05:45 p. m.",
+        "date": "20 de junio de 2026",
+        "attachment": {
+          "url": "/api/images/messages/messages-1781995517429.webm",
+          "type": "audio"
+        }
+      },
+      {
+        "id": 1782015908452,
+        "type": "sent",
+        "text": "🔍",
+        "time": "11:25 p. m.",
+        "date": "20 de junio de 2026"
+      },
+      {
+        "id": 1782015912381,
+        "type": "sent",
+        "text": "",
+        "time": "11:25 p. m.",
+        "date": "20 de junio de 2026",
+        "attachment": {
+          "url": "/api/images/messages/messages-1782015912317.webm",
+          "type": "audio"
+        }
+      },
+      {
+        "id": 1783179943729,
+        "type": "sent",
+        "text": "",
+        "time": "10:45 a. m.",
+        "date": "04 de julio de 2026",
+        "attachment": {
+          "url": "/api/images/messages/messages-1783179943691.webm",
+          "type": "audio"
+        }
+      }
+    ],
+    "updatedAt": "2026-07-04T15:45:43.729Z"
+  }
+]

@@ -1,0 +1,390 @@
+<!DOCTYPE html><html class="light" lang="es" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>NUMISMATIC - El Gran Podio de Puja</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500;700&amp;family=Homemade+Apple&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary-container": "#1c3461",
+                        "error": "#ba1a1a",
+                        "secondary-fixed": "#ffdf9c",
+                        "tertiary-fixed": "#ffddb4",
+                        "on-secondary-fixed-variant": "#5b4300",
+                        "on-secondary": "#ffffff",
+                        "tertiary-fixed-dim": "#e3c197",
+                        "on-error": "#ffffff",
+                        "surface-bright": "#fff8f2",
+                        "on-background": "#241a07",
+                        "tertiary": "#2e1c01",
+                        "error-container": "#ffdad6",
+                        "on-tertiary-fixed": "#291800",
+                        "secondary-fixed-dim": "#ecc15d",
+                        "on-error-container": "#93000a",
+                        "on-surface-variant": "#44474f",
+                        "inverse-primary": "#b0c6fc",
+                        "surface-container-low": "#fff2df",
+                        "background": "#fff8f2",
+                        "on-primary": "#ffffff",
+                        "inverse-on-surface": "#ffefd5",
+                        "outline": "#757780",
+                        "on-secondary-container": "#775900",
+                        "secondary": "#785a00",
+                        "on-tertiary": "#ffffff",
+                        "tertiary-container": "#463112",
+                        "primary-fixed": "#d8e2ff",
+                        "surface-dim": "#ebd8b8",
+                        "primary": "#011e4b",
+                        "on-primary-fixed": "#001a43",
+                        "on-tertiary-fixed-variant": "#5a4322",
+                        "outline-variant": "#c4c6d0",
+                        "surface-container-high": "#f9e6c6",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-variant": "#f3e0c0",
+                        "surface-container-highest": "#f3e0c0",
+                        "inverse-surface": "#3a2f19",
+                        "on-secondary-fixed": "#251a00",
+                        "on-primary-fixed-variant": "#2f4674",
+                        "secondary-container": "#fed16c",
+                        "on-surface": "#241a07",
+                        "primary-fixed-dim": "#b0c6fc",
+                        "on-primary-container": "#879dd1",
+                        "surface-tint": "#485e8d",
+                        "surface-container": "#ffebcb",
+                        "surface": "#fff8f2",
+                        "on-tertiary-container": "#b89871"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "margin-desktop": "48px",
+                        "margin-mobile": "16px",
+                        "unit": "8px",
+                        "max-width": "1280px"
+                    },
+                    "fontFamily": {
+                        "label-sm": ["JetBrains Mono"],
+                        "label-xs": ["JetBrains Mono"],
+                        "body-md": ["Inter"],
+                        "headline-lg": ["Playfair Display"],
+                        "headline-md": ["Playfair Display"],
+                        "headline-xl": ["Playfair Display"],
+                        "body-lg": ["Inter"],
+                        "handwriting": ["Homemade Apple", "cursive"]
+                    },
+                    "fontSize": {
+                        "label-sm": ["12px", {"lineHeight": "1.4", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                        "label-xs": ["10px", {"lineHeight": "1.4", "letterSpacing": "0.1em", "fontWeight": "500"}],
+                        "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                        "headline-lg": ["32px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                        "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                        "headline-xl": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .parchment-bg {
+            background-color: #fff8f2;
+            background-image: url("https://www.transparenttextures.com/patterns/parchment.png");
+        }
+        .leather-sidebar {
+            background-color: #2c1a12;
+            background-image: url("https://www.transparenttextures.com/patterns/leather.png");
+            box-shadow: inset -10px 0 20px rgba(0,0,0,0.5);
+        }
+        .dotted-grid {
+            background-image: radial-gradient(circle, #C8A96E 1px, transparent 1px);
+            background-size: 24px 24px;
+        }
+        .ink-stamp {
+            border: 2px solid #8e0000;
+            color: #8e0000;
+            padding: 2px 8px;
+            text-transform: uppercase;
+            font-weight: bold;
+            display: inline-block;
+            transform: rotate(-5deg);
+            opacity: 0.8;
+            font-family: 'JetBrains Mono', monospace;
+            border-radius: 2px;
+        }
+        .mounted-card {
+            background-color: #f4ece1;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+        .corner-tab {
+            position: absolute;
+            width: 24px;
+            height: 24px;
+            border: 1px solid rgba(0,0,0,0.1);
+            background: rgba(255,255,255,0.4);
+            backdrop-filter: blur(1px);
+        }
+        .corner-tl { top: 0; left: 0; border-right: none; border-bottom: none; }
+        .corner-tr { top: 0; right: 0; border-left: none; border-bottom: none; }
+        .corner-bl { bottom: 0; left: 0; border-right: none; border-top: none; }
+        .corner-br { bottom: 0; right: 0; border-left: none; border-top: none; }
+        
+        .wax-seal {
+            background: radial-gradient(circle, #b22222 0%, #8b0000 70%, #5e0000 100%);
+            box-shadow: 4px 4px 10px rgba(0,0,0,0.4), inset 2px 2px 5px rgba(255,255,255,0.2);
+        }
+        .metallic-relief {
+            background: linear-gradient(135deg, #b89871 0%, #d8be9d 50%, #b89871 100%);
+            border: 1px solid #7a6141;
+            box-shadow: inset 0 1px 0 rgba(255,255,255,0.3), 0 2px 4px rgba(0,0,0,0.2);
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #8d6e63;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body class="parchment-bg text-on-surface min-h-screen font-body-md selection:bg-secondary-fixed selection:text-on-secondary-fixed">
+<!-- Sidebar Navigation (Leather Ledger Style) -->
+<aside class="fixed left-0 top-0 h-full w-[240px] leather-sidebar flex flex-col border-r border-black/40 z-50"><div class="p-8 flex flex-col items-center border-b border-white/5">
+<div class="relative mb-4 group cursor-pointer">
+<div class="w-24 h-24 rounded-full border-2 border-secondary-fixed/30 p-1 group-hover:border-secondary-fixed transition-colors">
+<div class="w-full h-full rounded-full bg-surface-container-highest flex items-center justify-center overflow-hidden border border-black/40">
+<img alt="Curador Arqueólogo" class="w-full h-full object-cover filter sepia-[0.2]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmuTWyOpxvpTeQ3njR6ZtG6KSrJQNq1JgMDC_tdKP_Sw0lb3FLX2BVBH8lrmb46MTHh5MDEW3fyyJBg7se9cL-tzAffi0YlZyrVkISS-6PwHmot8n0jXOnORU5gBV8P4HTpj11Cc92mtfuty2g-IVwRT1sMha8hl5ZKrxhmj7o_Tg9pZNoh9R2emK5khiRKaLJjQ9Gm9L_Bjv2THezaGbPhR_BH2ah0caCDVCCLJwsSt9EUFzjwzi-YMLLbdc_0c1I5CwCO-LcW8Y">
+</div>
+</div>
+<div class="absolute -bottom-1 -right-1 bg-secondary-fixed text-on-secondary-fixed px-1.5 py-0.5 rounded-full flex items-center gap-0.5 shadow-sm border border-black/20">
+<span class="material-symbols-outlined text-[12px] fill-1">star</span>
+<span class="text-[10px] font-bold font-label-sm">4.8</span>
+</div>
+</div>
+<div class="text-center">
+<h2 class="font-headline-md text-[18px] text-secondary-fixed leading-none mb-1 uppercase tracking-wide">CURADOR ARQUEÓLOGO</h2>
+<p class="font-label-xs text-on-primary-container opacity-60 tracking-[0.2em] uppercase mb-4">LEDGER N° 4821</p>
+<div class="flex justify-center gap-2">
+<div class="w-6 h-6 rounded-full bg-secondary-fixed/10 border border-secondary-fixed/20 flex items-center justify-center" title="Master Curator">
+<span class="material-symbols-outlined text-[14px] text-secondary-fixed fill-1">workspace_premium</span>
+</div>
+<div class="w-6 h-6 rounded-full bg-slate-300/10 border border-slate-300/20 flex items-center justify-center" title="Expert Verifier">
+<span class="material-symbols-outlined text-[14px] text-slate-300 fill-1">military_tech</span>
+</div>
+<div class="w-6 h-6 rounded-full bg-orange-800/10 border border-orange-800/20 flex items-center justify-center" title="Top Collector">
+<span class="material-symbols-outlined text-[14px] text-orange-400 fill-1">stars</span>
+</div>
+</div>
+</div>
+</div>
+<nav class="flex-1 mt-6">
+<div class="space-y-1">
+<a class="flex items-center gap-4 px-8 py-3.5 text-white/60 hover:text-secondary-fixed hover:bg-white/5 transition-all group" href="#">
+<span class="material-symbols-outlined transition-transform group-hover:scale-110">newspaper</span>
+<span class="font-label-sm text-label-sm tracking-widest">NOTICIAS</span>
+</a>
+<a class="flex items-center gap-4 px-8 py-3.5 text-white/60 hover:text-secondary-fixed hover:bg-white/5 transition-all group" href="#">
+<span class="material-symbols-outlined transition-transform group-hover:scale-110">inventory_2</span>
+<span class="font-label-sm text-label-sm tracking-widest uppercase">Inventario</span>
+</a>
+<a class="flex items-center gap-4 px-8 py-3.5 text-white/60 hover:text-secondary-fixed hover:bg-white/5 transition-all group" href="#">
+<span class="material-symbols-outlined transition-transform group-hover:scale-110">sell</span>
+<span class="font-label-sm text-label-sm tracking-widest uppercase">Ventas</span>
+</a>
+<a class="flex items-center gap-4 px-8 py-3.5 text-white/60 hover:text-secondary-fixed hover:bg-white/5 transition-all group" href="#">
+<span class="material-symbols-outlined transition-transform group-hover:scale-110">verified</span>
+<span class="font-label-sm text-label-sm tracking-widest uppercase">Certificaciones</span>
+</a>
+<a class="flex items-center gap-4 px-8 py-3.5 bg-secondary-fixed/10 text-secondary-fixed font-bold border-r-4 border-secondary-fixed shadow-inner" href="#">
+<span class="material-symbols-outlined fill-1">gavel</span>
+<span class="font-label-sm text-label-sm tracking-widest uppercase">Subasta</span>
+</a>
+</div>
+</nav>
+<div class="mt-auto pb-8">
+<a class="flex items-center gap-4 px-8 py-4 text-white/30 hover:text-white transition-colors group border-t border-white/5" href="#">
+<span class="material-symbols-outlined text-[20px] group-hover:rotate-45 transition-transform">settings</span>
+<span class="font-label-sm text-label-xs tracking-[0.2em] uppercase">PREFERENCIAS</span>
+</a>
+</div></aside>
+<!-- Header -->
+<header class="fixed top-0 left-0 right-0 h-16 ml-[240px] bg-white/50 backdrop-blur-md border-b border-outline-variant/40 flex justify-between items-center px-gutter z-40">
+<h1 class="font-headline-lg text-headline-lg font-bold text-primary tracking-tighter italic">EL GRAN PODIO DE PUJA</h1>
+<div class="flex items-center gap-6">
+<div class="relative flex items-center bg-white/50 rounded-sm px-4 py-1.5 border-b-2 border-outline-variant">
+<input class="bg-transparent border-none focus:ring-0 text-body-md font-body-md placeholder:text-outline-variant placeholder:italic w-64" placeholder="Buscar en los anales..." type="text">
+<span class="material-symbols-outlined text-outline">history_edu</span>
+</div>
+<div class="flex items-center gap-4">
+<button class="flex items-center gap-2 hover:opacity-80 transition-opacity bg-white/40 px-3 py-1.5 rounded border border-outline-variant/50 shadow-sm">
+<span class="material-symbols-outlined text-secondary">account_balance_wallet</span>
+<span class="font-label-sm text-label-sm text-on-surface font-bold">S/. 12,450</span>
+</button>
+</div>
+</div>
+</header>
+<!-- Main Content -->
+<main class="ml-[240px] mt-16 p-gutter max-w-max-width mx-auto dotted-grid min-h-[calc(100vh-64px)]">
+<div class="flex flex-col lg:flex-row gap-8 mt-4"><div class="flex-1 flex flex-col gap-8">
+<!-- Central Specimen Card -->
+<section class="mounted-card relative p-8 shadow-xl overflow-hidden flex-1 flex flex-col">
+<div class="corner-tab corner-tl"></div>
+<div class="corner-tab corner-tr"></div>
+<div class="corner-tab corner-bl"></div>
+<div class="corner-tab corner-br"></div>
+<!-- Top: Coin Display + Title/Description -->
+<div class="flex flex-col md:flex-row gap-8 items-start flex-1">
+<div class="relative flex-shrink-0">
+<div class="w-64 h-64 bg-[#e8dfd1] rounded-full flex items-center justify-center overflow-hidden shadow-inner border border-black/5 group">
+<img alt="8 Escudos" class="w-4/5 h-4/5 object-contain drop-shadow-2xl group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJlGNMdPY8c9WS-APpnMalwAr6tYddBRRbkVpUiqsja6bXofV8Ynwh4As_IyKcIOShp7jF4ad98fBqLpDE6GVhOKan18l9bC8oGs95ut71VYITsvta9HClQI-zlMkcUQ6cpJ4Rx2uN70UKWyesrixQx20suWTJzcreiwxHTG5nqJnuLOsDNohddPEIhSz_EFUFOLs9-7Q-beRRkLFecBeyNj_FDs1UlwVI3d382IZY3WFkmRfqezT2lyaXtOcqJ4-rt-L8oTmw2Mo">
+</div>
+</div>
+<div class="flex-1 space-y-4">
+<p class="font-label-xs text-outline uppercase tracking-[0.2em] border-b border-dotted border-outline-variant pb-2">ENTRADA DE REGISTRO #4402</p>
+<h2 class="font-headline-xl text-[40px] text-primary italic leading-none">8 Escudos "La Libertad"</h2>
+<div class="pt-4">
+<p class="font-label-xs text-outline-variant uppercase mb-1">DESCRIPCION / NOTAS DE CAMPO</p>
+<p class="text-on-surface/80 leading-relaxed font-body-md text-body-lg italic">
+                        Ceca de Lima, año de 1821. Una pieza que respira los albores de la emancipación. Se observa una pátina dorada excepcional, testigo mudo del primer diseño republicano.
+                    </p>
+</div>
+</div>
+</div>
+<!-- Bottom: Control Bar -->
+<div class="mt-auto pt-8 border-t border-dotted border-outline-variant">
+<div class="grid grid-cols-3 gap-6 mb-6">
+<div class="p-4 bg-surface-container-low/50 border-b-2 border-outline-variant">
+<p class="font-label-sm text-outline uppercase tracking-widest text-[10px]">PUJA ACTUAL</p>
+<p class="font-headline-md text-primary font-bold">S/. 1250</p>
+</div>
+<div class="p-4 bg-white border-b-2 border-secondary">
+<p class="font-label-sm text-secondary uppercase tracking-widest text-[10px]">TU PUJA</p>
+<p class="font-headline-md text-secondary font-bold">S/. <span id="bid-value-display" class="">1800</span></p>
+</div>
+<button class="bg-primary text-secondary-fixed font-bold hover:brightness-110 transition-all uppercase tracking-widest text-sm py-4">
+                    OFERTAR
+                </button>
+</div>
+<div class="space-y-2">
+<input class="w-full h-1.5 bg-outline-variant/30 rounded-lg appearance-none cursor-pointer accent-secondary" max="5000" min="1300" oninput="document.getElementById('bid-value-display').innerText = this.value" step="50" type="range" value="1800">
+<div class="flex justify-between font-label-xs text-outline italic">
+<span class="">S/. 1250 PUJA ACTUAL</span>
+<span class="">S/. 5000 PUJA MAXIMA</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Curador Assistant -->
+<section class="flex items-start gap-6 p-6 bg-white/40 border-l-4 border-secondary/50">
+<div class="w-16 h-16 flex-shrink-0 rounded-full wax-seal flex items-center justify-center overflow-hidden border-2 border-secondary shadow-lg">
+<img alt="Arqueólogo Curador" class="w-full h-full object-cover mix-blend-overlay opacity-90" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAEdiUhzhlSw72Y9mkuFLkuN5QZMydyfUnf_tGl0QGXuQkFNIuFXNpajG9BUdlboPDCci1YCk9qggV717-k4UcaIzgM-9LCtSXpBFI_0pFBTCBBRwI4owCrm8U8GfRqOqWWMfoYmCQKXzOugHynYSi7V0c2rFCwafcyYqxIryKhdA6b2rCGSXcwb8X8NjBzR4FGadQbM-kF7Gg9mW-kt75CxtGc5_ces2ZYZZcEnBiXMn3kbCNqyw5QedQmQuG9jjP2j9OHcmlo38A">
+</div>
+<div class="flex-1">
+<div class="relative bg-white/90 p-5 shadow-sm border border-black/5 after:content-[''] after:absolute after:top-6 after:-left-2 after:w-4 after:h-4 after:bg-white after:border-l after:border-b after:border-black/5 after:rotate-45">
+<p class="text-lg text-primary font-body-md font-semibold">"Estimado coleccionista, la sala está inquieta. Una nueva oferta ha sido registrada. ¿Desea proceder con un incremento manual o prefiere el ajuste automático?"</p>
+</div>
+</div>
+</section>
+</div>
+<!-- Right Column: Bidding Ledger & Countdown -->
+<div class="lg:w-2/5 space-y-8">
+<!-- Bidders Book -->
+<section class="bg-white/80 border border-black/5 flex flex-col shadow-lg overflow-hidden">
+<div class="bg-surface-container-low/50 px-6 py-4 border-b border-outline-variant/40">
+<h3 class="font-headline-md text-primary flex items-center gap-3 italic uppercase text-sm tracking-widest">
+<span class="material-symbols-outlined text-secondary">military_tech</span>
+                PUESTOS DE LA PUJA
+            </h3>
+</div>
+<div class="p-4 custom-scrollbar overflow-y-auto max-h-[300px]">
+<table class="w-full text-left">
+<thead class="font-label-xs text-outline uppercase tracking-widest border-b border-dotted border-outline-variant">
+<tr>
+<th class="px-4 py-3">RANK</th>
+<th class="px-4 py-3">USUARIO</th>
+<th class="px-4 py-3 text-right">OFERTA</th>
+</tr>
+</thead>
+<tbody class="font-body-md">
+<tr class="bg-secondary-fixed/10 border-b border-secondary-fixed/20">
+<td class="px-4 py-4 font-bold text-primary italic">#1</td>
+<td class="px-4 py-4"><span class="font-headline-md text-xl text-primary italic" data-stitch-orig-opacity="0">Usted</span></td>
+<td class="px-4 py-4 text-right font-bold text-primary">S/. 1250</td>
+</tr>
+<tr class="border-b border-dotted border-outline-variant/30">
+<td class="px-4 py-4 text-outline italic">#2</td>
+<td class="px-4 py-4"><span class="font-headline-md text-xl text-on-surface opacity-80 italic" data-stitch-orig-opacity="0">Don_Historiador</span></td>
+<td class="px-4 py-4 text-right italic text-on-surface/60">S/. 1200</td>
+</tr>
+<tr class="border-b border-dotted border-outline-variant/30">
+<td class="px-4 py-4 text-outline italic">#3</td>
+<td class="px-4 py-4"><span class="font-headline-md text-xl text-on-surface opacity-80 italic" data-stitch-orig-opacity="0">Curadora_Lurn</span></td>
+<td class="px-4 py-4 text-right italic text-on-surface/60">S/. 1150</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<!-- Countdown: Moving below table as per sketch -->
+<section class="bg-primary text-white p-8 shadow-2xl relative overflow-hidden text-center border-t-4 border-secondary-fixed">
+<div class="absolute inset-0 opacity-10 parchment-bg"></div>
+<div class="flex items-center justify-center gap-3 mb-2">
+<span class="material-symbols-outlined text-secondary-fixed">schedule</span>
+<p class="font-label-sm text-secondary-fixed/70 uppercase tracking-[0.3em]">TIEMPO RESTANTE</p>
+</div>
+<div class="font-label-sm text-[48px] leading-none font-bold text-secondary-fixed tracking-widest drop-shadow-md" id="countdown">02:47:689</div>
+<div class="mt-4 flex justify-center gap-10 font-label-xs text-secondary-fixed/50 uppercase tracking-widest">
+<span class="">hrs.</span>
+<span class="">min.</span>
+<span class="">seg.</span>
+</div>
+</section>
+<!-- Authenticity Certification -->
+<section class="p-8 border-2 border-dotted border-secondary/50 rounded-sm flex flex-col items-center text-center space-y-4 bg-white/40 shadow-inner relative">
+<div class="w-16 h-16 flex items-center justify-center rounded-full wax-seal text-secondary-fixed">
+<span class="material-symbols-outlined text-[32px]">workspace_premium</span>
+</div>
+<h4 class="font-headline-md text-primary uppercase tracking-[0.1em] italic text-sm">Sello de Autenticidad</h4>
+<p class="font-headline-md text-xl text-on-surface italic leading-relaxed">"Certificado oficial de autenticidad numismática."</p>
+</section>
+</div></div>
+</main>
+<!-- Footer -->
+
+<script>
+    // Timer Micro-interaction
+    let timeLeft = 190845;
+    const countdownElement = document.getElementById('countdown');
+    
+    function updateTimer() {
+        if (timeLeft <= 0) return;
+        timeLeft -= 7;
+        
+        const minutes = Math.floor(timeLeft / 60000);
+        const seconds = Math.floor((timeLeft % 60000) / 1000);
+        const millis = timeLeft % 1000;
+        
+        countdownElement.innerText = 
+            `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}:${millis.toString().padStart(3, '0')}`;
+        
+        requestAnimationFrame(updateTimer);
+    }
+    
+    requestAnimationFrame(updateTimer);
+</script>
+
+
+</body></html>

@@ -1,0 +1,444 @@
+<!DOCTYPE html><html class="light" lang="en" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>NUMISMATIC - Collector's Ledger</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Playfair+Display:ital,wght@0,600;0,700;1,600&amp;family=JetBrains+Mono:wght@500&amp;family=Homemade+Apple&amp;display=swap" rel="stylesheet">
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary-container": "#1c3461",
+                    "error": "#ba1a1a",
+                    "secondary-fixed": "#ffdf9c",
+                    "tertiary-fixed": "#ffddb4",
+                    "on-secondary-fixed-variant": "#5b4300",
+                    "on-secondary": "#ffffff",
+                    "tertiary-fixed-dim": "#e3c197",
+                    "on-error": "#ffffff",
+                    "surface-bright": "#fff8f2",
+                    "on-background": "#241a07",
+                    "tertiary": "#2e1c01",
+                    "error-container": "#ffdad6",
+                    "on-tertiary-fixed": "#291800",
+                    "secondary-fixed-dim": "#ecc15d",
+                    "on-error-container": "#93000a",
+                    "on-surface-variant": "#44474f",
+                    "inverse-primary": "#b0c6fc",
+                    "surface-container-low": "#fff2df",
+                    "background": "#fff8f2",
+                    "on-primary": "#ffffff",
+                    "inverse-on-surface": "#ffefd5",
+                    "outline": "#757780",
+                    "on-secondary-container": "#775900",
+                    "secondary": "#785a00",
+                    "on-tertiary": "#ffffff",
+                    "tertiary-container": "#463112",
+                    "primary-fixed": "#d8e2ff",
+                    "surface-dim": "#ebd8b8",
+                    "primary": "#011e4b",
+                    "on-primary-fixed": "#001a43",
+                    "on-tertiary-fixed-variant": "#5a4322",
+                    "outline-variant": "#c4c6d0",
+                    "surface-container-high": "#f9e6c6",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-variant": "#f3e0c0",
+                    "surface-container-highest": "#f3e0c0",
+                    "inverse-surface": "#3a2f19",
+                    "on-secondary-fixed": "#251a00",
+                    "on-primary-fixed-variant": "#2f4674",
+                    "secondary-container": "#fed16c",
+                    "on-surface": "#241a07",
+                    "primary-fixed-dim": "#b0c6fc",
+                    "on-primary-container": "#879dd1",
+                    "surface-tint": "#485e8d",
+                    "surface-container": "#ffebcb",
+                    "surface": "#fff8f2",
+                    "on-tertiary-container": "#b89871"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "gutter": "24px",
+                    "margin-desktop": "48px",
+                    "margin-mobile": "16px",
+                    "unit": "8px",
+                    "max-width": "1280px"
+            },
+            "fontFamily": {
+                    "label-sm": ["JetBrains Mono"],
+                    "label-xs": ["JetBrains Mono"],
+                    "body-md": ["Inter"],
+                    "headline-lg-mobile": ["Playfair Display"],
+                    "headline-lg": ["Playfair Display"],
+                    "headline-md": ["Playfair Display"],
+                    "headline-xl": ["Playfair Display"],
+                    "body-lg": ["Inter"],
+                    "handwriting": ["Homemade Apple", "cursive"]
+            },
+            "fontSize": {
+                    "label-sm": ["12px", {"lineHeight": "1.4", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                    "label-xs": ["10px", {"lineHeight": "1.4", "letterSpacing": "0.1em", "fontWeight": "500"}],
+                    "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                    "headline-lg-mobile": ["28px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                    "headline-lg": ["32px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                    "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "headline-xl": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .dotted-grid {
+            background-image: radial-gradient(circle, #C8A96E 1px, transparent 1px);
+            background-size: 24px 24px;
+        }
+        .parchment-bg {
+            background-color: #fff8f2;
+            background-image: url("https://www.transparenttextures.com/patterns/parchment.png");
+        }
+        .leather-sidebar {
+            background-color: #2c1a12;
+            background-image: url("https://www.transparenttextures.com/patterns/leather.png");
+            box-shadow: inset -10px 0 20px rgba(0,0,0,0.5);
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #8d6e63;
+            border-radius: 10px;
+        }
+        .coin-silhouette {
+            opacity: 0.15;
+            filter: sepia(1) saturate(0.5);
+        }
+        .ink-stamp {
+            border: 2px solid #8e0000;
+            color: #8e0000;
+            padding: 2px 8px;
+            text-transform: uppercase;
+            font-weight: bold;
+            display: inline-block;
+            transform: rotate(-5deg);
+            opacity: 0.8;
+            font-family: 'JetBrains Mono', monospace;
+            border-radius: 2px;
+        }
+        .corner-tab {
+            position: absolute;
+            width: 24px;
+            height: 24px;
+            border: 1px solid rgba(0,0,0,0.1);
+            background: rgba(255,255,255,0.4);
+            backdrop-filter: blur(1px);
+        }
+        .corner-tl { top: 0; left: 0; border-right: none; border-bottom: none; }
+        .corner-tr { top: 0; right: 0; border-left: none; border-bottom: none; }
+        .corner-bl { bottom: 0; left: 0; border-right: none; border-top: none; }
+        .corner-br { bottom: 0; right: 0; border-left: none; border-top: none; }
+        
+        .wax-seal {
+            background: radial-gradient(circle, #b22222 0%, #8b0000 70%, #5e0000 100%);
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 4px 4px 10px rgba(0,0,0,0.4), inset 2px 2px 5px rgba(255,255,255,0.2);
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        .wax-seal:hover {
+            transform: scale(1.05) rotate(5deg);
+        }
+        .wax-seal::after {
+            content: 'N';
+            color: #ffdf9c;
+            font-family: 'Playfair Display', serif;
+            font-weight: bold;
+            font-size: 32px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md overflow-hidden parchment-bg">
+<!-- Sidebar (Leather Texture) -->
+<aside class="fixed left-0 top-0 h-full w-[240px] leather-sidebar flex flex-col border-r border-black/40 z-50">
+<div class="p-8 border-b border-white/10"><div class="flex flex-col items-center text-center gap-3">
+  <div class="relative">
+    <div class="w-20 h-20 rounded-full border-2 border-secondary-fixed/50 p-1">
+      <div class="w-full h-full rounded-full bg-surface-container-highest flex items-center justify-center overflow-hidden border border-black/20">
+        <span class="material-symbols-outlined text-4xl text-on-surface-variant">person</span>
+      </div>
+    </div>
+    <div class="absolute -bottom-1 -right-1 bg-secondary-fixed text-on-secondary-fixed px-1.5 py-0.5 rounded-full flex items-center gap-0.5 shadow-sm border border-black/10">
+      <span class="material-symbols-outlined text-[12px] fill-1">star</span>
+      <span class="text-[10px] font-bold font-label-sm">4.5</span>
+    </div>
+  </div>
+  <div>
+    <h2 class="font-headline-md text-[18px] text-secondary-fixed leading-tight tracking-wide">CURADOR ARQUÉOLOGO</h2>
+    <p class="font-label-xs text-on-primary-container opacity-70 tracking-[0.2em] uppercase">Ledger N° 4821</p><div class="mt-4 space-y-1.5">
+  <p class="text-[9px] font-label-xs text-secondary-fixed/40 uppercase tracking-[0.15em] text-center">INSIGNIAS OBTENIDAS</p>
+  <div class="flex justify-center gap-2">
+    <div class="w-6 h-6 rounded-full bg-secondary-fixed/20 border border-secondary-fixed/30 flex items-center justify-center" title="Gold Badge">
+      <span class="material-symbols-outlined text-[14px] text-secondary-fixed fill-1">workspace_premium</span>
+    </div>
+    <div class="w-6 h-6 rounded-full bg-slate-300/20 border border-slate-300/30 flex items-center justify-center" title="Silver Badge">
+      <span class="material-symbols-outlined text-[14px] text-slate-300 fill-1">military_tech</span>
+    </div>
+    <div class="w-6 h-6 rounded-full bg-orange-800/20 border border-orange-800/30 flex items-center justify-center" title="Bronze Badge">
+      <span class="material-symbols-outlined text-[14px] text-orange-400 fill-1">stars</span>
+    </div>
+  </div>
+</div>
+  </div>
+</div></div>
+<nav class="flex-1 mt-6">
+<div class="space-y-1">
+<a class="flex items-center gap-3 px-6 py-3 text-white/60 hover:text-secondary-fixed hover:bg-white/5 transition-colors group" href="#">
+<span class="material-symbols-outlined">auto_stories</span>
+<span class="font-label-sm text-label-sm">NOTICIAS</span>
+</a>
+<!-- Active Item: Inventory -->
+<a class="flex items-center gap-3 px-6 py-3 bg-white/10 text-secondary-fixed font-bold border-r-4 border-secondary-fixed shadow-lg" href="#">
+<span class="material-symbols-outlined">menu_book</span>
+<span class="font-label-sm text-label-sm">INVENTARIO</span>
+</a>
+<a class="flex items-center gap-3 px-6 py-3 text-white/60 hover:text-secondary-fixed hover:bg-white/5 transition-colors group" href="#">
+<span class="material-symbols-outlined">payments</span>
+<span class="font-label-sm text-label-sm">VENTAS</span>
+</a>
+<a class="flex items-center gap-3 px-6 py-3 text-white/60 hover:text-secondary-fixed hover:bg-white/5 transition-colors group" href="#">
+<span class="material-symbols-outlined">verified</span>
+<span class="font-label-sm text-label-sm">CERTIFIACIONES</span>
+</a>
+<a class="flex items-center gap-3 px-6 py-3 text-white/60 hover:text-secondary-fixed hover:bg-white/5 transition-colors group" href="#">
+<span class="material-symbols-outlined">gavel</span>
+<span class="font-label-sm text-label-sm">SUBASTA</span>
+</a>
+</div>
+</nav>
+<div class="mt-auto p-6 space-y-3 bg-black/20">
+
+<a class="flex items-center gap-3 px-4 py-2 text-white/40 hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined text-[20px]">settings</span>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-[10px]">PREFERENCIAS</span>
+</a>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="ml-[240px] flex h-screen overflow-hidden">
+<!-- Center: Grid of Coins (Archive View) -->
+<section class="flex-1 flex flex-col bg-transparent relative dotted-grid border-r border-outline-variant/30">
+<!-- Top Bar (Search & Filters) -->
+<div class="h-16 flex items-center justify-between px-gutter bg-surface-container-low/50 border-b border-outline-variant/40 z-10 backdrop-blur-sm">
+<div class="flex items-center gap-4 flex-1 max-w-xl">
+<div class="relative w-full">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline">history_edu</span>
+<input class="w-full pl-10 pr-4 py-2 bg-white/50 border-b-2 border-outline-variant focus:border-secondary transition-colors font-body-md text-on-surface focus:outline-none placeholder:italic" placeholder="Search record book..." type="text">
+</div>
+</div>
+<div class="flex items-center gap-3">
+<button class="flex items-center gap-2 px-3 py-1.5 border border-outline-variant/50 hover:bg-white transition-colors rounded">
+<span class="material-symbols-outlined text-[18px]">filter_alt</span>
+<span class="font-label-sm text-label-sm">Filter</span>
+</button>
+<div class="flex border border-outline-variant/50 rounded overflow-hidden shadow-sm">
+<button class="p-1.5 bg-secondary text-white">
+<span class="material-symbols-outlined text-[18px]">grid_view</span>
+</button>
+<button class="p-1.5 bg-white/50 hover:bg-white text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px]">view_agenda</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Scrollable Grid -->
+<div class="flex-1 overflow-y-auto p-gutter custom-scrollbar relative">
+<div class="grid grid-cols-2 lg:grid-cols-3 gap-10">
+<!-- Coin Card 1 (Mounted Cardstock Style) -->
+<div class="group bg-[#f4ece1] hover:shadow-2xl hover:-translate-y-1 transition-all cursor-pointer relative p-4 flex flex-col justify-between aspect-[3/4] border border-black/5 shadow-md">
+<!-- Corner Tabs for 'mounted' look -->
+<div class="corner-tab corner-tl"></div>
+<div class="corner-tab corner-tr"></div>
+<div class="corner-tab corner-bl"></div>
+<div class="corner-tab corner-br"></div>
+<div class="absolute top-2 right-2 z-10">
+<span class="ink-stamp text-[10px] scale-75">CERTIFIED</span>
+</div>
+<div class="aspect-square bg-[#e8dfd1] rounded-full flex items-center justify-center overflow-hidden shadow-inner border border-black/5 mb-2 flex-1">
+<img class="w-4/5 h-4/5 object-contain drop-shadow-xl group-hover:scale-105 transition-transform duration-700 grayscale-[0.2]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDMSFsNHgT3SMkJNbKCoM5j9vUSwPtCBpWH0ljTadlBgcSxi91Md_VkVySOIL9KS8Rlkb-s5_jIJ1wAJxK61CSXfx94OZ37CZ4xQF01rezWu6DX9HRBFChHeahGPMZmgmZfOzk1hnuqSrnI8yY76-DY29p7lAHKPh2iBqvx0IKot6QtCicA3afq3bjqJbVT9ZtYVKOIwNwUrwmVv-blPwq1LAADKCJFtOloAv0BVNq0qh27DWgrNGaviQJcOKX_twHUvvjO9yWkjHM">
+</div>
+<div class="text-center"><h3 class="font-headline-md text-[18px] text-primary mb-1 italic">Tetradracma de Etica</h3><div class="flex items-center justify-center gap-2"><div class="flex gap-1.5"><button class="w-5 h-5 flex items-center justify-center rounded-sm border border-primary/40 bg-white/40 hover:bg-secondary-container/30 transition-all cursor-pointer"><span class="material-symbols-outlined text-[12px] text-primary font-bold">visibility</span></button><button class="w-5 h-5 flex items-center justify-center rounded-sm border border-primary/40 bg-white/40 hover:bg-secondary-container/30 transition-all cursor-pointer"><span class="material-symbols-outlined text-[12px] text-primary font-bold">token</span></button><button class="w-5 h-5 flex items-center justify-center rounded-sm border border-primary/40 bg-white/40 hover:bg-secondary-container/30 transition-all cursor-pointer"><span class="material-symbols-outlined text-[14px] text-primary opacity-80">info</span></button></div></div></div>
+</div>
+<!-- Coin Card 2 (Active/Selected) -->
+<div class="group bg-[#f4ece1] hover:shadow-2xl transition-all cursor-pointer relative p-4 flex flex-col justify-between aspect-[3/4] border-2 border-secondary ring-4 ring-secondary/5 shadow-lg">
+<div class="corner-tab corner-tl bg-secondary/10"></div>
+<div class="corner-tab corner-tr bg-secondary/10"></div>
+<div class="corner-tab corner-bl bg-secondary/10"></div>
+<div class="corner-tab corner-br bg-secondary/10"></div>
+
+<div class="aspect-square bg-[#e8dfd1] rounded-full flex items-center justify-center overflow-hidden shadow-inner border border-black/5 mb-2 flex-1">
+<img class="w-4/5 h-4/5 object-contain drop-shadow-xl group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDgGD0eUTnQJ8CzK7nJq5qai0FOGKaSpeUGxY5_rrKqUE2ciim0Y2XelhRqNdks7F5lgGHv6sBNeKW-GMUq8Ggt61SuouvCzBKg2a3QGFNOKO3HNyv-HwOn2AcDbUY6nQfpW2GRbFbRBo5iHvS2KzMNFmzrgBR3UlJbYcb0PvjjiFX01GE7pDkSrPlfkO5O-ZVDWgZf_xjP3c5QNBq-7PNfu8_6SLmEgeOK0HXiTBHoGhvCtQ9D1t0IHQ5szBHazB4G010-xCvj6Uo">
+</div>
+<div class="text-center"><h3 class="font-headline-md text-[18px] text-primary mb-1 italic">Escudo de Oro</h3><div class="flex items-center justify-center gap-2"><div class="flex gap-1.5"><button class="w-5 h-5 flex items-center justify-center rounded-sm border border-primary/40 bg-white/40 hover:bg-secondary-container/30 transition-all cursor-pointer"><span class="material-symbols-outlined text-[12px] text-primary font-bold">visibility</span></button><button class="w-5 h-5 flex items-center justify-center rounded-sm border border-primary/40 bg-white/40 hover:bg-secondary-container/30 transition-all cursor-pointer"><span class="material-symbols-outlined text-[12px] text-primary font-bold">token</span></button><button class="w-5 h-5 flex items-center justify-center rounded-sm border border-primary/40 bg-white/40 hover:bg-secondary-container/30 transition-all cursor-pointer"><span class="material-symbols-outlined text-[14px] text-primary opacity-80">info</span></button></div></div></div>
+</div>
+<!-- Coin Card 3 -->
+<div class="group bg-[#f4ece1] hover:shadow-2xl hover:-translate-y-1 transition-all cursor-pointer relative p-4 flex flex-col justify-between aspect-[3/4] border border-black/5 shadow-md">
+<div class="corner-tab corner-tl"></div>
+<div class="corner-tab corner-tr"></div>
+<div class="corner-tab corner-bl"></div>
+<div class="corner-tab corner-br"></div>
+<div class="aspect-square bg-[#e8dfd1] rounded-full flex items-center justify-center overflow-hidden shadow-inner border border-black/5 mb-2 flex-1">
+<img class="w-4/5 h-4/5 object-contain drop-shadow-xl group-hover:scale-105 transition-transform duration-700 grayscale-[0.4]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAkcYh1bzEcJ2NUU-6T0c6nAD55fb3W_AVXt4guXAZD0uOW3jTzufwsdRE_j5DYxh_iStjIW2UYotejMHtB2BGiInbk5n0KSP7OJ36ktrKR1rBObAX3S5DRhKIeosMaaebGfWczj5rH0iN5ME83W8CABO4Y65HBBJKrxFlXVs5kg0eayLtOgrWYNbjJXuA7YytYmHZD--MSyP6gwrYkYdbe8zJH6BOzfPyQEdbdlz-lqnujuFF3gKw7umxL-pVrERgA9PLt1m3YUjg">
+</div>
+<div class="text-center"><h3 class="font-headline-md text-[18px] text-primary mb-1 italic">Leonidas de Adriano</h3><div class="flex items-center justify-center gap-2"><div class="flex gap-1.5"><button class="w-5 h-5 flex items-center justify-center rounded-sm border border-primary/40 bg-white/40 hover:bg-secondary-container/30 transition-all cursor-pointer"><span class="material-symbols-outlined text-[12px] text-primary font-bold">visibility</span></button><button class="w-5 h-5 flex items-center justify-center rounded-sm border border-primary/40 bg-white/40 hover:bg-secondary-container/30 transition-all cursor-pointer"><span class="material-symbols-outlined text-[12px] text-primary font-bold">token</span></button><button class="w-5 h-5 flex items-center justify-center rounded-sm border border-primary/40 bg-white/40 hover:bg-secondary-container/30 transition-all cursor-pointer"><span class="material-symbols-outlined text-[14px] text-primary opacity-80">info</span></button></div></div></div>
+</div>
+<!-- Empty Slot (Velvet Tray Look) -->
+<div class="bg-[#2d0a0a] rounded-xl p-6 flex flex-col items-center justify-center border-4 border-[#3d1a1a] shadow-inner opacity-60 aspect-[3/4]">
+<div class="w-24 h-24 rounded-full bg-black/40 border-2 border-dashed border-white/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-white/10 text-[48px]">add</span>
+</div>
+<p class="font-label-xs text-white/30 mt-4 uppercase tracking-[0.2em]">WEIGHT</p>
+</div>
+<div class="bg-[#2d0a0a] rounded-xl p-6 flex flex-col items-center justify-center border-4 border-[#3d1a1a] shadow-inner opacity-60 aspect-[3/4]">
+<div class="w-24 h-24 rounded-full bg-black/40 border-2 border-dashed border-white/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-white/10 text-[48px]">add</span>
+</div>
+<p class="font-label-xs text-white/30 mt-4 uppercase tracking-[0.2em]">TRAY SLOT 049</p>
+</div>
+</div>
+<!-- Floating Quick Archive Seal -->
+<button class="fixed bottom-10 left-[750px] z-50 flex flex-col items-center gap-2 group transition-all" title="Consultar al Arqueólogo">
+  <div class="w-16 h-16 rounded-full bg-gradient-to-br from-[#cd7f32] via-[#8b4513] to-[#3e2723] border-2 border-[#5d4037] shadow-[4px_4px_10px_rgba(0,0,0,0.4),inset_2px_2px_5px_rgba(255,255,255,0.2)] flex items-center justify-center transform group-hover:scale-105 group-active:scale-95 transition-transform"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBM2aBqgYf_dmo5j302rf8iJ-dQvR0O45SD85Kk0pMPwGuyPOg2sMA-Lz9Th4yayO-tzo5ODiUMy0RTuhdAshSXSRMpJ-yx2F4qnSCiHQ6DWfQ_YM6sXjazlDPovj6B5NCPI7EWCHcT2mAex-YBSgylzUXrlOQYi7oyU3firotM8nsFnpInJiTNs3hk-h-as5NQ6WiQjUwdxzJ46EekCYXgnS2sD5PFMFvkdEsIbAlSctXrOocZd7cBCQI_-DoWc5eM80WA5P7U7cA" alt="Archaeologist Icon" class="w-full h-full object-cover rounded-full mix-blend-overlay opacity-90"></div>
+  <span class="bg-black/80 text-white text-[9px] px-2 py-0.5 rounded font-label-sm opacity-100 uppercase tracking-widest">AYUDA CURADOR</span>
+  <div class="absolute -top-10 bg-secondary-fixed text-on-secondary-fixed px-3 py-1 rounded text-[10px] font-bold font-label-sm opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap shadow-md uppercase tracking-widest border border-black/10">Consultar al Arqueólogo</div>
+</button>
+</div>
+</section>
+<!-- Right: Detail Panel (Museum Documentation) -->
+<aside class="w-[420px] bg-surface-container-low flex flex-col overflow-hidden border-l border-outline-variant/30">
+<div class="flex-1 overflow-y-auto p-gutter custom-scrollbar parchment-bg">
+<!-- Archival Photo -->
+<div class="aspect-square bg-white border border-outline-variant/50 p-8 flex items-center justify-center mb-8 relative shadow-lg">
+<div class="absolute inset-0 bg-[#f4ece1] opacity-20 pointer-events-none"></div>
+<img class="w-full h-full object-contain drop-shadow-2xl" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJMswU3vvcNlZ-h0s8WhynyPcSJp-FYDXjc7kWxBRQH6Ber30VRthj5wG-ltYGgkiiPQiXIZv--xYUVLcuYdx2mM9EX6LxCRUzN7yWsVzzFSXosFMCl8-SKo7uvGRVMPVjlINJI3zYKGuuZrmVmXVFy01rExX2Rca0BNZg2lKRPTZ39z7An4nEsUGPZ6J-0qCAFC0sJ6HdOlyxo4cqCLuASvaxPmVxUaJJNQ5zQbEd5dPFOVGwoaNDzMH3BNBhhTHhLWQQVcjVkog">
+<button class="absolute top-4 left-4 w-8 h-8 bg-black/10 hover:bg-black/20 text-on-surface rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">photo_camera</span>
+</button>
+</div>
+<!-- Documentation Sheet -->
+<div class="bg-white/80 p-8 shadow-sm border border-black/5 relative">
+<!-- Handwritten Annotation -->
+<div class="absolute -top-4 -right-2 transform rotate-12">
+
+</div>
+<h2 class="font-headline-md text-headline-md text-primary mb-2 italic">Escudo de Oro</h2>
+<p class="font-label-sm text-label-sm text-outline uppercase tracking-[0.2em] mb-6 border-b border-dotted border-outline-variant pb-2">Ref: GRE-ATH-440BC</p>
+<div class="space-y-6">
+<div class="grid gap-8 grid-cols-3">
+<div><div class="flex justify-between items-start">
+  <div>
+    <p class="font-label-xs text-outline-variant uppercase mb-1">ORIGIN</p>
+    <p class="font-body-md text-on-surface font-semibold underline decoration-dotted decoration-outline-variant underline-offset-4">Athens, Greece</p>
+  </div>
+  
+</div></div>
+<div>
+<p class="font-label-xs text-outline-variant uppercase mb-1">ERA</p>
+<p class="font-body-md text-on-surface font-semibold">440–404 BC</p>
+</div>
+<div>
+<p class="font-label-xs text-outline-variant uppercase mb-1">MATERIAL</p>
+<p class="font-body-md text-on-surface font-semibold">Silver (98.5%)</p>
+</div>
+<div>
+<p class="font-label-xs text-outline-variant uppercase mb-1">WEIGHT</p>
+<p class="font-body-md text-on-surface font-semibold">17.24 g</p>
+</div>
+<div class=""><p class="font-label-xs text-outline-variant uppercase mb-1">VALOR ACTUAL</p><p class="font-body-md text-on-surface font-semibold">$4,850.00</p></div></div>
+<div class="pt-4 border-t border-dotted border-outline-variant"><p class="font-label-xs text-outline-variant uppercase mb-3">FIELD NOTES</p><div class="font-headline-md text-on-surface space-y-4"><div class="space-y-1"><p class="text-[12px] font-bold uppercase tracking-wider text-secondary">Valor Histórico</p><p class="text-body-md leading-relaxed">Pieza fundamental del periodo clásico, representando el apogeo artístico de Atenas.</p></div><div class="space-y-1"><p class="text-[12px] font-bold uppercase tracking-wider text-secondary">Rareza</p><p class="text-body-md leading-relaxed">Muy Rara (R2). Escasos ejemplares con este nivel de conservación en el cuño.</p></div><div class="space-y-1"><p class="text-[12px] font-bold uppercase tracking-wider text-secondary">Descripción</p><p class="text-body-md leading-relaxed">Acuñación exquisita en ambas caras. Las plumas del búho permanecen notablemente nítidas. Una pequeña grieta de cuño visible en el anverso añade carácter a esta pieza del clasicismo tardío.</p></div></div></div>
+<div class="bg-secondary/5 p-4 border border-secondary/20 rounded">
+<div class="flex justify-between items-center">
+<div>
+<p class="font-label-xs text-outline uppercase">Value Appraisal</p>
+<p class="font-headline-md text-secondary font-bold">$4,850.00</p>
+</div>
+<div class="text-right">
+<span class="material-symbols-outlined text-secondary text-[32px]">workspace_premium</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer Actions (Tools of the Trade) -->
+<div class="p-6 border-t border-outline-variant/30 bg-surface-container-highest/80 flex gap-4">
+<button class="flex-1 flex items-center justify-center gap-2 py-3 border border-primary text-primary font-bold hover:bg-primary/5 transition-all text-xs uppercase tracking-widest"><span class="material-symbols-outlined text-[18px]">edit_note</span> VENDER</button>
+<button class="flex-1 flex items-center justify-center gap-2 py-3 bg-primary text-secondary-fixed font-bold hover:brightness-110 transition-all text-xs uppercase tracking-widest shadow-lg"><span class="material-symbols-outlined text-[18px]">gavel</span> SUBASTAR</button>
+</div>
+</aside>
+<button class="fixed right-8 rounded-full bg-gradient-to-br from-[#d4af37] via-[#a67c00] to-[#785a00] border-2 border-[#5b4300] shadow-[4px_4px_10px_rgba(0,0,0,0.5),inset_2px_2px_4px_rgba(255,255,255,0.3)] hover:shadow-[2px_2px_5px_rgba(0,0,0,0.4),inset_1px_1px_2px_rgba(255,255,255,0.2)] hover:scale-95 active:scale-90 transition-all z-50 flex items-center justify-center group top-20 w-14 h-14" title="Mascotas"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2KcuoxdOdGKqjP4OcxwL40VTR_Zb1Gbu7OJN9DpcJOGO5bJ6QmDPWIzToysVkgDPSvsL5GsExRN58m--ShQm5Y6LZW9y_7KZJEiwooWBjCN-9bCqbBQJKj8gCxKgihpiGJyfvyK1rFSDPH14cGzUE4XMj5xnlou6I_HvVniV9csKvOAFvZlaSrBO4yjsIFOnpoGSeE6AxS1ZNutihjO5fLCbqEvUy5ywnW5wwMUwNl1ZcCmFcorxidABukdjI0TDdssTeKsMAbHk" alt="Terrestrial Globe" class="w-10 h-10 object-contain drop-shadow-[1px_1px_1px_rgba(0,0,0,0.5)]">
+  <div class="absolute -bottom-10 right-0 bg-secondary-fixed text-on-secondary-fixed px-3 py-1 rounded text-[10px] font-bold font-label-sm opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap shadow-md uppercase tracking-widest">Mascotas</div></button></main>
+<script>
+    // Selection logic
+    document.querySelectorAll('.group.cursor-pointer').forEach(card => {
+        card.addEventListener('click', () => {
+            document.querySelectorAll('.group.cursor-pointer').forEach(c => {
+                c.classList.remove('border-2', 'border-secondary', 'ring-4', 'ring-secondary/5', 'shadow-lg');
+                c.classList.add('border', 'border-black/5', 'shadow-md');
+                const tabs = c.querySelectorAll('.corner-tab');
+                tabs.forEach(t => t.classList.remove('bg-secondary/10'));
+            });
+            
+            card.classList.add('border-2', 'border-secondary', 'ring-4', 'ring-secondary/5', 'shadow-lg');
+            card.classList.remove('border', 'border-black/5', 'shadow-md');
+            const activeTabs = card.querySelectorAll('.corner-tab');
+            activeTabs.forEach(t => t.classList.add('bg-secondary/10'));
+            
+            console.log('Accessing record:', card.querySelector('.font-handwriting').innerText);
+        });
+    });
+    
+    // Seal interaction
+    const seal = document.querySelector('.wax-seal');
+    seal.addEventListener('click', () => {
+        seal.style.transform = 'scale(0.9) rotate(-10deg)';
+        setTimeout(() => {
+            seal.style.transform = 'scale(1.05) rotate(5deg)';
+            alert('Selection archived and sealed with digital wax.');
+        }, 150);
+    });
+</script>
+
+
+
+
+
+
+</body></html>

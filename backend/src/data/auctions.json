@@ -1,0 +1,77 @@
+[
+  {
+    "id": "LOT-1782015723236",
+    "coinId": "NA-000906",
+    "coinName": "Aureus Imperial — Trajano",
+    "coinGrade": "MS-63",
+    "coinMint": "Roma Imperial",
+    "coinYear": 112,
+    "imageUrl": "/api/images/coins/coin-1781769000765.png",
+    "auctionHouse": "Chosica",
+    "startingBid": 777,
+    "currentBid": 1050,
+    "auctionDate": "2026-07-30",
+    "lotRef": "Lote #444",
+    "notes": "Chau",
+    "status": "active",
+    "createdAt": "2026-06-21T04:22:03.236Z",
+    "bids": [
+      {
+        "amount": 1050,
+        "bidder": "Dr. Alejandro Vega",
+        "time": "2026-07-02T14:03:38.066Z"
+      }
+    ]
+  },
+  {
+    "id": "LOT-1781940233402",
+    "coinId": "NA-954485",
+    "coinName": "Libertad de Plata",
+    "coinGrade": "XF-45",
+    "coinMint": "Casa de Moneda de México",
+    "coinYear": 1995,
+    "imageUrl": "/api/images/coins/coins-1781939954391.png",
+    "auctionHouse": "FISI UNMSM",
+    "startingBid": 900,
+    "currentBid": 975,
+    "auctionDate": "2026-06-21",
+    "lotRef": "Lote #645",
+    "notes": "Prueba N",
+    "status": "active",
+    "createdAt": "2026-06-20T07:23:53.402Z"
+  },
+  {
+    "id": "LOT-1781843907337",
+    "coinId": "NA-713072",
+    "coinName": "Serie Riqueza y Orgullo del Perú — Machu Picchu",
+    "coinGrade": "MS-65",
+    "coinMint": "Banco Central de Reserva del Perú",
+    "coinYear": 2011,
+    "imageUrl": "/api/images/coins/coin-1781811712851.png",
+    "auctionHouse": "OLIMPOBET",
+    "startingBid": 123456,
+    "currentBid": 129006,
+    "auctionDate": "2026-06-23",
+    "lotRef": "Lote #123",
+    "notes": "Prueba 2.",
+    "status": "active",
+    "createdAt": "2026-06-19T04:38:27.337Z"
+  },
+  {
+    "id": "LOT-1781843808846",
+    "coinId": "NA-063965",
+    "coinName": "Double Eagle — Liberty Head",
+    "coinGrade": "MS-65",
+    "coinMint": "U.S. Mint",
+    "coinYear": 1907,
+    "imageUrl": "/api/images/coins/coin-1781769063888.png",
+    "auctionHouse": "BETANO",
+    "startingBid": 5000,
+    "currentBid": 6000,
+    "auctionDate": "2026-06-19",
+    "lotRef": "Lote #479",
+    "notes": "Prueba Lote 1.",
+    "status": "active",
+    "createdAt": "2026-06-19T04:36:48.846Z"
+  }
+]

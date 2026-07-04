@@ -1,0 +1,31 @@
+import { Router } from 'express';
+import authRoutes    from './auth.routes.js';
+import usersRoutes   from './users.routes.js';
+import coinsRoutes   from './coins.routes.js';
+import mascotsRoutes from './mascots.routes.js';
+import imagesRoutes  from './images.routes.js';
+import healthRoutes  from './health.routes.js';
+import salesRoutes   from './sales.routes.js';
+import auctionsRoutes from './auctions.routes.js';
+import activityRoutes from './activity.routes.js';
+import postsRoutes from './posts.routes.js';
+import summaryRoutes from './summary.routes.js';
+import certificationsRoutes from './certifications.routes.js';
+import conversationsRoutes from './conversations.routes.js';
+
+const router = Router();
+router.use('/auth',    authRoutes);
+router.use('/users',   usersRoutes);
+router.use('/coins',   coinsRoutes);
+router.use('/mascots', mascotsRoutes);
+router.use('/images',  imagesRoutes);
+router.use('/health',  healthRoutes);
+router.use('/sales',   salesRoutes);
+router.use('/auctions', auctionsRoutes);
+router.use('/activity', activityRoutes);
+router.use('/posts', postsRoutes);
+router.use('/summary', summaryRoutes);
+router.use('/certifications', certificationsRoutes);
+router.use('/conversations', conversationsRoutes);
+
+export default router;

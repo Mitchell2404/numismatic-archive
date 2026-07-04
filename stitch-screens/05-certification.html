@@ -1,0 +1,428 @@
+<!DOCTYPE html><html class="light" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Certification - Numismatic Archival Systems</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Playfair+Display:ital,wght@0,600;0,700;1,600&amp;family=JetBrains+Mono:wght@500&amp;family=Homemade+Apple&amp;display=swap" rel="stylesheet">
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary-container": "#1c3461",
+                    "error": "#ba1a1a",
+                    "secondary-fixed": "#ffdf9c",
+                    "tertiary-fixed": "#ffddb4",
+                    "on-secondary-fixed-variant": "#5b4300",
+                    "on-secondary": "#ffffff",
+                    "tertiary-fixed-dim": "#e3c197",
+                    "on-error": "#ffffff",
+                    "surface-bright": "#fff8f2",
+                    "on-background": "#241a07",
+                    "tertiary": "#2e1c01",
+                    "error-container": "#ffdad6",
+                    "on-tertiary-fixed": "#291800",
+                    "secondary-fixed-dim": "#ecc15d",
+                    "on-error-container": "#93000a",
+                    "on-surface-variant": "#44474f",
+                    "inverse-primary": "#b0c6fc",
+                    "surface-container-low": "#fff2df",
+                    "background": "#fff8f2",
+                    "on-primary": "#ffffff",
+                    "inverse-on-surface": "#ffefd5",
+                    "outline": "#757780",
+                    "on-secondary-container": "#775900",
+                    "secondary": "#785a00",
+                    "on-tertiary": "#ffffff",
+                    "tertiary-container": "#463112",
+                    "primary-fixed": "#d8e2ff",
+                    "surface-dim": "#ebd8b8",
+                    "primary": "#011e4b",
+                    "on-primary-fixed": "#001a43",
+                    "on-tertiary-fixed-variant": "#5a4322",
+                    "outline-variant": "#c4c6d0",
+                    "surface-container-high": "#f9e6c6",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-variant": "#f3e0c0",
+                    "surface-container-highest": "#f3e0c0",
+                    "inverse-surface": "#3a2f19",
+                    "on-secondary-fixed": "#251a00",
+                    "on-primary-fixed-variant": "#2f4674",
+                    "secondary-container": "#fed16c",
+                    "on-surface": "#241a07",
+                    "primary-fixed-dim": "#b0c6fc",
+                    "on-primary-container": "#879dd1",
+                    "surface-tint": "#485e8d",
+                    "surface-container": "#ffebcb",
+                    "surface": "#fff8f2",
+                    "on-tertiary-container": "#b89871"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "gutter": "24px",
+                    "margin-desktop": "48px",
+                    "margin-mobile": "16px",
+                    "unit": "8px",
+                    "max-width": "1280px"
+            },
+            "fontFamily": {
+                    "label-sm": ["JetBrains Mono"],
+                    "label-xs": ["JetBrains Mono"],
+                    "body-md": ["Inter"],
+                    "headline-lg-mobile": ["Playfair Display"],
+                    "headline-lg": ["Playfair Display"],
+                    "headline-md": ["Playfair Display"],
+                    "headline-xl": ["Playfair Display"],
+                    "body-lg": ["Inter"],
+                    "handwriting": ["Homemade Apple", "cursive"]
+            },
+            "fontSize": {
+                    "label-sm": ["12px", {"lineHeight": "1.4", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                    "label-xs": ["10px", {"lineHeight": "1.4", "letterSpacing": "0.1em", "fontWeight": "500"}],
+                    "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                    "headline-lg-mobile": ["28px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                    "headline-lg": ["32px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                    "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "headline-xl": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .dotted-grid {
+            background-image: radial-gradient(circle, #C8A96E 1px, transparent 1px);
+            background-size: 24px 24px;
+        }
+        .parchment-bg {
+            background-color: #fff8f2;
+            background-image: url("https://www.transparenttextures.com/patterns/parchment.png");
+        }
+        .leather-sidebar {
+            background-color: #2c1a12;
+            background-image: url("https://www.transparenttextures.com/patterns/leather.png");
+            box-shadow: inset -10px 0 20px rgba(0,0,0,0.5);
+        }
+        .ink-stamp {
+            border: 2px solid #8e0000;
+            color: #8e0000;
+            padding: 2px 8px;
+            text-transform: uppercase;
+            font-weight: bold;
+            display: inline-block;
+            transform: rotate(-5deg);
+            opacity: 0.8;
+            font-family: 'JetBrains Mono', monospace;
+            border-radius: 2px;
+        }
+        .corner-tab {
+            position: absolute;
+            width: 24px;
+            height: 24px;
+            border: 1px solid rgba(0,0,0,0.1);
+            background: rgba(255,255,255,0.4);
+            backdrop-filter: blur(1px);
+        }
+        .corner-tl { top: 0; left: 0; border-right: none; border-bottom: none; }
+        .corner-tr { top: 0; right: 0; border-left: none; border-bottom: none; }
+        .corner-bl { bottom: 0; left: 0; border-right: none; border-top: none; }
+        .corner-br { bottom: 0; right: 0; border-left: none; border-top: none; }
+        
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #8d6e63;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md parchment-bg min-h-screen flex">
+<!-- Sidebar (Leather Texture) -->
+<aside class="fixed left-0 top-0 h-full w-[240px] leather-sidebar flex flex-col border-r border-black/40 z-50">
+<div class="p-8 border-b border-white/10">
+<div class="flex flex-col items-center text-center gap-3">
+<div class="relative">
+<div class="w-20 h-20 rounded-full border-2 border-secondary-fixed/50 p-1">
+<div class="w-full h-full rounded-full bg-surface-container-highest flex items-center justify-center overflow-hidden border border-black/20">
+<span class="material-symbols-outlined text-4xl text-on-surface-variant">person</span>
+</div>
+</div>
+<div class="absolute -bottom-1 -right-1 bg-secondary-fixed text-on-secondary-fixed px-1.5 py-0.5 rounded-full flex items-center gap-0.5 shadow-sm border border-black/10">
+<span class="material-symbols-outlined text-[12px] fill-1">star</span>
+<span class="text-[10px] font-bold font-label-sm">4.5</span>
+</div>
+</div>
+<div>
+<h2 class="font-headline-md text-[18px] text-secondary-fixed leading-tight tracking-wide">CURADOR ARQUÉOLOGO</h2>
+<p class="font-label-xs text-on-primary-container opacity-70 tracking-[0.2em] uppercase">Ledger N° 4821</p>
+<div class="mt-4 space-y-1.5">
+<p class="text-[9px] font-label-xs text-secondary-fixed/40 uppercase tracking-[0.15em] text-center">INSIGNIAS OBTENIDAS</p>
+<div class="flex justify-center gap-2">
+<div class="w-6 h-6 rounded-full bg-secondary-fixed/20 border border-secondary-fixed/30 flex items-center justify-center" title="Gold Badge">
+<span class="material-symbols-outlined text-[14px] text-secondary-fixed fill-1">workspace_premium</span>
+</div>
+<div class="w-6 h-6 rounded-full bg-slate-300/20 border border-slate-300/30 flex items-center justify-center" title="Silver Badge">
+<span class="material-symbols-outlined text-[14px] text-slate-300 fill-1">military_tech</span>
+</div>
+<div class="w-6 h-6 rounded-full bg-orange-800/20 border border-orange-800/30 flex items-center justify-center" title="Bronze Badge">
+<span class="material-symbols-outlined text-[14px] text-orange-400 fill-1">stars</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<nav class="flex-1 mt-6">
+<div class="space-y-1">
+<a class="flex items-center gap-3 px-6 py-3 text-white/60 hover:text-secondary-fixed hover:bg-white/5 transition-colors group" href="#">
+<span class="material-symbols-outlined">auto_stories</span>
+<span class="font-label-sm text-label-sm uppercase">Noticias</span>
+</a>
+<a class="flex items-center gap-3 px-6 py-3 text-white/60 hover:text-secondary-fixed hover:bg-white/5 transition-colors group" href="#">
+<span class="material-symbols-outlined">menu_book</span>
+<span class="font-label-sm text-label-sm uppercase">Inventario</span>
+</a>
+<a class="flex items-center gap-3 px-6 py-3 text-white/60 hover:text-secondary-fixed hover:bg-white/5 transition-colors group" href="#">
+<span class="material-symbols-outlined">payments</span>
+<span class="font-label-sm text-label-sm uppercase">Ventas</span>
+</a>
+<!-- Active Item: Certificaciones -->
+<a class="flex items-center gap-3 px-6 py-3 bg-white/10 text-secondary-fixed font-bold border-r-4 border-secondary-fixed shadow-lg" href="#">
+<span class="material-symbols-outlined">verified</span>
+<span class="font-label-sm text-label-sm uppercase">Certificaciones</span>
+</a>
+<a class="flex items-center gap-3 px-6 py-3 text-white/60 hover:text-secondary-fixed hover:bg-white/5 transition-colors group" href="#">
+<span class="material-symbols-outlined">gavel</span>
+<span class="font-label-sm text-label-sm uppercase">Subasta</span>
+</a>
+</div>
+</nav>
+<div class="mt-auto p-6 space-y-3 bg-black/20">
+<a class="flex items-center gap-3 px-4 py-2 text-white/40 hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined text-[20px]">settings</span>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-[10px]">PREFERENCIAS</span>
+</a>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="ml-[240px] flex-1 min-h-screen dotted-grid pb-12">
+<!-- Top Bar -->
+<header class="h-16 flex items-center justify-between px-gutter bg-surface-container-low/50 border-b border-outline-variant/40 z-10 backdrop-blur-sm sticky top-0">
+<div class="font-headline-lg text-primary italic font-bold">CERTIFICACIÓN</div>
+<div class="flex items-center gap-6">
+<div class="relative w-64">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline">search</span>
+<input class="w-full pl-10 pr-4 py-1.5 bg-white/50 border-b-2 border-outline-variant focus:border-secondary transition-colors font-body-md text-on-surface focus:outline-none placeholder:italic text-sm" placeholder="Search archives..." type="text">
+</div>
+<div class="flex items-center gap-4 text-on-surface-variant">
+<button class="hover:text-primary transition-colors"><span class="material-symbols-outlined">notifications</span></button>
+<div class="w-8 h-8 rounded-full bg-surface-container-highest border border-black/10 overflow-hidden">
+<img alt="User" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMEt3YRwK1NauRvpSSOw_LDfmpkze-SXSmsiYdK_6QzXILK5rQvhanG5dcxxL1uVIE1vwEt8BXkj05AWW5U6-1ULWBsDHYjVvpXEkCIZAuAkfDIlFaRrg9wiOQxwjePWGHxCEKS3aSzBum-Yr1yg9T_fnyo9I9MZWnBc0SoN1uHTd61fJVKU9l6rNeOMpZ-Q-A4LXniJYnyOyGmLSo5KxALfQGk0Ask3p0klTAgmQQ4NhpoLHVBrDCdZCAHc7zQvphbpCVeCRGIjE">
+</div>
+</div>
+</div>
+</header>
+<div class="max-w-max-width mx-auto px-margin-desktop py-12">
+<div class="grid grid-cols-12 gap-10">
+<!-- Left Column: Process -->
+<div class="col-span-8 space-y-10">
+<!-- Section: Coin Identity (Archival Style) -->
+<section class="bg-[#f4ece1] p-8 relative border border-black/5 shadow-md">
+<div class="corner-tab corner-tl"></div>
+<div class="corner-tab corner-tr"></div>
+<div class="corner-tab corner-bl"></div>
+<div class="corner-tab corner-br"></div>
+<div class="flex items-center gap-10">
+<div class="w-48 h-48 bg-[#e8dfd1] rounded-full flex items-center justify-center overflow-hidden shadow-inner border border-black/5 ring-8 ring-white/20">
+<img alt="Selected Coin" class="w-4/5 h-4/5 object-contain drop-shadow-2xl grayscale-[0.2]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCAjpx6HEZkbk75_HxAeNLal3OYxSCuiVKOsAEyex9ru1oX5ppbw_MsZ8TaVBFxSd1_YhaRfdCr2TNkihu_afaq658p4jSLk6kezOiDy8wSwtNC7Wo36Kg8VqfVqIsW4mLdeECxRgWZeSVUiYIJaYXY9J8qkW4qjUWb7ePdpJt7U-U-F3d44bzDhr2dGKgS7fG_S2HQOACDg2Df5su2AUuWU6WgNUdN4DIFNjl-FT8MZhI6_waeI9xrrfPb6b94jdxQUgUhnf9DDGY">
+</div>
+<div class="flex-1">
+<div class="flex items-center gap-3 mb-2">
+<h2 class="font-headline-md text-3xl text-primary italic">1894-S Barber Dime</h2>
+<span class="ink-stamp text-[9px]">Archived</span>
+</div>
+<p class="font-body-md text-on-surface-variant leading-relaxed mb-6 italic border-l-2 border-outline-variant/30 pl-4">
+                                Branch Mint Proof, Rarity Index: R-7. Identified by the San Francisco Mint archives as one of only 24 struck.
+                            </p>
+<button class="flex items-center gap-2 px-6 py-2 border border-primary text-primary font-bold hover:bg-primary/5 transition-all text-xs uppercase tracking-widest shadow-sm">
+<span class="material-symbols-outlined text-sm">edit_note</span>
+                                Cambiar Moneda
+                            </button>
+</div>
+</div>
+</section>
+<!-- Section: Tiers -->
+<section>
+<div class="flex justify-between items-end mb-8 border-b border-dotted border-outline-variant pb-2">
+<div>
+<h3 class="font-headline-md text-2xl text-primary italic">Nivel de Certificación</h3>
+<p class="font-label-xs text-outline uppercase tracking-[0.2em] mt-1">Seleccionar Profundidad de Archivo</p>
+</div>
+<div class="flex bg-[#e8dfd1] p-1 border border-black/10 rounded-sm">
+<button class="px-5 py-1 text-on-surface-variant font-label-sm text-[10px] uppercase hover:text-primary">Normal</button>
+<button class="px-5 py-1 bg-primary text-secondary-fixed font-bold font-label-sm text-[10px] uppercase shadow-md">Urgente</button>
+</div>
+</div>
+<div class="grid grid-cols-3 gap-6">
+<!-- Tier Card -->
+<div class="bg-[#f4ece1] p-6 border border-black/5 shadow-md flex flex-col items-center text-center cursor-pointer hover:shadow-lg transition-all group">
+<span class="material-symbols-outlined text-outline text-3xl mb-4 group-hover:text-primary transition-colors">token</span>
+<h4 class="font-headline-md text-lg text-primary italic mb-2">Básica</h4>
+<p class="font-body-md text-xs text-on-surface-variant mb-6">Verificación estándar y encapsulado.</p>
+<div class="mt-auto pt-4 border-t border-dotted border-outline-variant w-full flex justify-between items-center px-2">
+<span class="font-headline-md text-xl text-secondary italic">$45</span>
+<span class="material-symbols-outlined text-outline-variant text-xl">radio_button_unchecked</span>
+</div>
+</div>
+<!-- Premium Tier Card (Active) -->
+<div class="bg-[#f4ece1] p-6 border-2 border-primary shadow-xl flex flex-col items-center text-center relative">
+<div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-primary text-secondary-fixed px-3 py-0.5 text-[9px] font-bold uppercase tracking-widest">Recomendado</div>
+<span class="material-symbols-outlined text-primary text-3xl mb-4">military_tech</span>
+<h4 class="font-headline-md text-lg text-primary italic mb-2">Premium</h4>
+<p class="font-body-md text-xs text-on-surface-variant mb-6">Imágenes de alta resolución e investigación de pedigrí.</p>
+<div class="mt-auto pt-4 border-t border-dotted border-primary/30 w-full flex justify-between items-center px-2">
+<span class="font-headline-md text-xl text-secondary italic font-bold">$120</span>
+<span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+</div>
+</div>
+<!-- Tier Card -->
+<div class="bg-[#f4ece1] p-6 border border-black/5 shadow-md flex flex-col items-center text-center cursor-pointer hover:shadow-lg transition-all group">
+<span class="material-symbols-outlined text-outline text-3xl mb-4 group-hover:text-primary transition-colors">diamond</span>
+<h4 class="font-headline-md text-lg text-primary italic mb-2">Estándar</h4>
+<p class="font-body-md text-xs text-on-surface-variant mb-6">Análisis metálico y procedencia completa.</p>
+<div class="mt-auto pt-4 border-t border-dotted border-outline-variant w-full flex justify-between items-center px-2">
+<span class="font-headline-md text-xl text-secondary italic">$85</span>
+<span class="material-symbols-outlined text-outline-variant text-xl">radio_button_unchecked</span>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- Right Column: Summary & Logistics -->
+<div class="col-span-4 space-y-8">
+<!-- Logistics Sheet -->
+<div class="bg-[#f4ece1] p-8 border border-black/5 shadow-md relative">
+<div class="flex items-center gap-3 mb-8">
+<span class="material-symbols-outlined text-primary">local_shipping</span>
+<h3 class="font-label-xs text-primary font-bold uppercase tracking-[0.2em]">Registro de Logística</h3>
+</div>
+<div class="space-y-8">
+<div class="relative pl-6 border-l-2 border-dotted border-outline-variant">
+<div class="absolute -left-[5px] top-0 w-[9px] h-[9px] rounded-full bg-primary ring-4 ring-white/50"></div>
+<p class="font-label-xs text-outline uppercase mb-1">Fecha de Ingreso</p>
+<p class="font-body-md font-bold text-primary italic">14 Dic, 2024</p>
+</div>
+<div class="relative pl-6 border-l-2 border-dotted border-outline-variant">
+<div class="absolute -left-[5px] top-0 w-[9px] h-[9px] rounded-full bg-outline-variant"></div>
+<p class="font-label-xs text-outline uppercase mb-1">Retorno Est. (Urgente)</p>
+<p class="font-body-md font-bold text-primary italic">22 Dic, 2024</p>
+</div>
+<div class="pt-6 border-t border-dotted border-outline-variant">
+<p class="font-label-xs text-outline uppercase mb-3">Punto de Entrega</p>
+<div class="bg-white/50 p-4 border border-black/5 shadow-inner">
+<p class="font-body-md text-xs text-on-surface-variant leading-relaxed">
+                                    Central Vault Archives<br>1200 Constitution Ave NW<br>Washington, DC 20560
+                                </p>
+</div>
+</div>
+</div>
+</div>
+<!-- Receipt / Summary -->
+<div class="bg-white/80 p-8 shadow-2xl border border-black/10 relative overflow-hidden">
+<div class="absolute -right-4 -top-4 opacity-5 rotate-12">
+<span class="material-symbols-outlined text-[120px] text-primary">verified_user</span>
+</div>
+<div class="flex justify-between items-start mb-10 border-b-2 border-primary/20 pb-4">
+<div>
+<h3 class="font-headline-md text-2xl text-primary italic">Resumen</h3>
+<p class="font-label-xs text-secondary-fixed-dim uppercase tracking-widest bg-primary px-2 py-0.5 inline-block mt-1">#NM-CERT-9902</p>
+</div>
+<div class="w-12 h-12 bg-white border border-black/10 p-1 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-2xl">qr_code_2</span>
+</div>
+</div>
+<div class="space-y-4 mb-10">
+<div class="flex justify-between font-label-sm border-b border-dotted border-outline-variant pb-2">
+<span class="text-on-surface-variant italic">Premium Tier</span>
+<span class="font-bold text-primary">$120.00</span>
+</div>
+<div class="flex justify-between font-label-sm border-b border-dotted border-outline-variant pb-2">
+<span class="text-on-surface-variant italic">Express Surcharge</span>
+<span class="font-bold text-primary">$35.00</span>
+</div>
+<div class="flex justify-between font-label-sm border-b border-dotted border-outline-variant pb-2">
+<span class="text-on-surface-variant italic">Insurance Ledger</span>
+<span class="font-bold text-primary">$12.50</span>
+</div>
+<div class="pt-6 flex justify-between items-end">
+<span class="font-headline-md text-2xl text-primary italic">Total</span>
+<span class="font-headline-md text-3xl text-secondary font-bold underline decoration-double decoration-secondary/30 underline-offset-8">$167.50</span>
+</div>
+</div>
+<button class="w-full bg-primary text-secondary-fixed font-bold py-4 px-6 hover:brightness-110 transition-all shadow-lg flex items-center justify-center gap-3 uppercase tracking-widest text-xs">
+<span class="material-symbols-outlined text-lg">approval</span>
+                        ENVIAR SOLICITUD
+                    </button>
+<p class="mt-6 text-[10px] text-center opacity-40 font-label-xs italic leading-tight">
+                        Al enviar, usted acepta los Términos de Depósito y los estándares de manejo archival institucional.
+                    </p>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+
+<script>
+    // Visual interactions for Tier cards
+    document.querySelectorAll('.grid-cols-3 > div').forEach(card => {
+        card.addEventListener('click', () => {
+            document.querySelectorAll('.grid-cols-3 > div').forEach(c => {
+                c.classList.remove('border-2', 'border-primary', 'shadow-xl');
+                c.classList.add('border', 'border-black/5', 'shadow-md');
+                const badge = c.querySelector('.absolute');
+                if (badge) badge.classList.add('hidden');
+                const icon = c.querySelector('[data-icon="check_circle"], .material-symbols-outlined:last-child');
+                if (icon) {
+                    icon.innerText = 'radio_button_unchecked';
+                    icon.classList.remove('text-primary');
+                    icon.classList.add('text-outline-variant');
+                }
+            });
+            
+            card.classList.add('border-2', 'border-primary', 'shadow-xl');
+            card.classList.remove('border', 'border-black/5', 'shadow-md');
+            const icon = card.querySelector('.material-symbols-outlined:last-child');
+            if (icon) {
+                icon.innerText = 'check_circle';
+                icon.classList.remove('text-outline-variant');
+                icon.classList.add('text-primary');
+            }
+        });
+    });
+</script>
+
+
+</body></html>

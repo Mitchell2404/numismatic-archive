@@ -1,0 +1,559 @@
+<!DOCTYPE html><html class="light" lang="es" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>NUMISMATIC - Noticias</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Playfair+Display:ital,wght@0,600;0,700;1,600&amp;family=JetBrains+Mono:wght@500&amp;family=Homemade+Apple&amp;display=swap" rel="stylesheet">
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary-container": "#1c3461",
+                    "error": "#ba1a1a",
+                    "secondary-fixed": "#ffdf9c",
+                    "tertiary-fixed": "#ffddb4",
+                    "on-secondary-fixed-variant": "#5b4300",
+                    "on-secondary": "#ffffff",
+                    "tertiary-fixed-dim": "#e3c197",
+                    "on-error": "#ffffff",
+                    "surface-bright": "#fff8f2",
+                    "on-background": "#241a07",
+                    "tertiary": "#2e1c01",
+                    "error-container": "#ffdad6",
+                    "on-tertiary-fixed": "#291800",
+                    "secondary-fixed-dim": "#ecc15d",
+                    "on-error-container": "#93000a",
+                    "on-surface-variant": "#44474f",
+                    "inverse-primary": "#b0c6fc",
+                    "surface-container-low": "#fff2df",
+                    "background": "#fff8f2",
+                    "on-primary": "#ffffff",
+                    "inverse-on-surface": "#ffefd5",
+                    "outline": "#757780",
+                    "on-secondary-container": "#775900",
+                    "secondary": "#785a00",
+                    "on-tertiary": "#ffffff",
+                    "tertiary-container": "#463112",
+                    "primary-fixed": "#d8e2ff",
+                    "surface-dim": "#ebd8b8",
+                    "primary": "#011e4b",
+                    "on-primary-fixed": "#001a43",
+                    "on-tertiary-fixed-variant": "#5a4322",
+                    "outline-variant": "#c4c6d0",
+                    "surface-container-high": "#f9e6c6",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-variant": "#f3e0c0",
+                    "surface-container-highest": "#f3e0c0",
+                    "inverse-surface": "#3a2f19",
+                    "on-secondary-fixed": "#251a00",
+                    "on-primary-fixed-variant": "#2f4674",
+                    "secondary-container": "#fed16c",
+                    "on-surface": "#241a07",
+                    "primary-fixed-dim": "#b0c6fc",
+                    "on-primary-container": "#879dd1",
+                    "surface-tint": "#485e8d",
+                    "surface-container": "#ffebcb",
+                    "surface": "#fff8f2",
+                    "on-tertiary-container": "#b89871"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "gutter": "24px",
+                    "margin-desktop": "48px",
+                    "margin-mobile": "16px",
+                    "unit": "8px",
+                    "max-width": "1280px"
+            },
+            "fontFamily": {
+                    "label-sm": ["JetBrains Mono"],
+                    "label-xs": ["JetBrains Mono"],
+                    "body-md": ["Inter"],
+                    "headline-lg-mobile": ["Playfair Display"],
+                    "headline-lg": ["Playfair Display"],
+                    "headline-md": ["Playfair Display"],
+                    "headline-xl": ["Playfair Display"],
+                    "body-lg": ["Inter"],
+                    "handwriting": ["Homemade Apple", "cursive"]
+            },
+            "fontSize": {
+                    "label-sm": ["12px", {"lineHeight": "1.4", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                    "label-xs": ["10px", {"lineHeight": "1.4", "letterSpacing": "0.1em", "fontWeight": "500"}],
+                    "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                    "headline-lg-mobile": ["28px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                    "headline-lg": ["32px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                    "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "headline-xl": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .parchment-texture {
+            background-color: #fff8f2;
+            background-image: url("https://www.transparenttextures.com/patterns/parchment.png");
+        }
+        .leather-sidebar {
+            background-color: #2c1a12;
+            background-image: url("https://www.transparenttextures.com/patterns/leather.png");
+            box-shadow: inset -10px 0 20px rgba(0,0,0,0.5);
+        }
+        .dotted-grid {
+            background-image: radial-gradient(circle, #C8A96E 1px, transparent 1px);
+            background-size: 24px 24px;
+        }
+        .ink-stamp {
+            border: 2px solid #8e0000;
+            color: #8e0000;
+            padding: 2px 8px;
+            text-transform: uppercase;
+            font-weight: bold;
+            display: inline-block;
+            transform: rotate(-5deg);
+            opacity: 0.8;
+            font-family: 'JetBrains Mono', monospace;
+            border-radius: 2px;
+        }
+        .corner-tab {
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            border: 1px solid rgba(0,0,0,0.05);
+            background: rgba(255,255,255,0.3);
+            backdrop-filter: blur(1px);
+        }
+        .corner-tl { top: 0; left: 0; border-right: none; border-bottom: none; }
+        .corner-tr { top: 0; right: 0; border-left: none; border-bottom: none; }
+        .corner-bl { bottom: 0; left: 0; border-right: none; border-top: none; }
+        .corner-br { bottom: 0; right: 0; border-left: none; border-top: none; }
+        
+        .wax-seal-btn {
+            background: radial-gradient(circle, #b22222 0%, #8b0000 70%, #5e0000 100%);
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.4), inset 1px 1px 2px rgba(255,255,255,0.2);
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        /* Removed ::after pseudo-element to remove 'N' characters */
+        .wax-seal-btn:hover {
+            transform: scale(1.1) rotate(5deg);
+        }
+
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: #8d6e63; border-radius: 10px; }
+    </style>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .parchment-texture {
+            background-color: #fff8f2;
+            background-image: url("https://www.transparenttextures.com/patterns/parchment.png");
+        }
+        .leather-sidebar {
+            background-color: #2c1a12;
+            background-image: url("https://www.transparenttextures.com/patterns/leather.png");
+            box-shadow: inset -10px 0 20px rgba(0,0,0,0.5);
+        }
+        .dotted-grid {
+            background-image: radial-gradient(circle, #C8A96E 1px, transparent 1px);
+            background-size: 24px 24px;
+        }
+        .ink-stamp {
+            border: 2px solid #8e0000;
+            color: #8e0000;
+            padding: 2px 8px;
+            text-transform: uppercase;
+            font-weight: bold;
+            display: inline-block;
+            transform: rotate(-5deg);
+            opacity: 0.8;
+            font-family: 'JetBrains Mono', monospace;
+            border-radius: 2px;
+        }
+        .corner-tab {
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            border: 1px solid rgba(0,0,0,0.05);
+            background: rgba(255,255,255,0.3);
+            backdrop-filter: blur(1px);
+        }
+        .corner-tl { top: 0; left: 0; border-right: none; border-bottom: none; }
+        .corner-tr { top: 0; right: 0; border-left: none; border-bottom: none; }
+        .corner-bl { bottom: 0; left: 0; border-right: none; border-top: none; }
+        .corner-br { bottom: 0; right: 0; border-left: none; border-top: none; }
+        
+        .wax-seal-btn {
+            background: radial-gradient(circle, #b22222 0%, #8b0000 70%, #5e0000 100%);
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.4), inset 1px 1px 2px rgba(255,255,255,0.2);
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        /* Removed ::after pseudo-element to remove 'N' characters */
+        .wax-seal-btn:hover {
+            transform: scale(1.1) rotate(5deg);
+        }
+
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: #8d6e63; border-radius: 10px; }
+    </style></head>
+<body class="bg-background text-on-background font-body-md parchment-texture min-h-screen">
+<!-- SIDE BAR NAVIGATION (Leather Texture from SCREEN_4) -->
+<aside class="fixed left-0 top-0 h-full w-[240px] leather-sidebar flex flex-col border-r border-black/40 z-50">
+<div class="p-8 border-b border-white/10">
+<div class="flex flex-col items-center text-center gap-3">
+<div class="relative">
+<div class="w-20 h-20 rounded-full border-2 border-secondary-fixed/50 p-1">
+<div class="w-full h-full rounded-full bg-surface-container-highest flex items-center justify-center overflow-hidden border border-black/20">
+<span class="material-symbols-outlined text-4xl text-on-surface-variant">person</span>
+</div>
+</div>
+<div class="absolute -bottom-1 -right-1 bg-secondary-fixed text-on-secondary-fixed px-1.5 py-0.5 rounded-full flex items-center gap-0.5 shadow-sm border border-black/10">
+<span class="material-symbols-outlined text-[12px] fill-1">star</span>
+<span class="text-[10px] font-bold font-label-sm">4.9</span>
+</div>
+</div>
+<div>
+<h2 class="font-headline-md text-[18px] text-secondary-fixed leading-tight tracking-wide">CURADOR ARQUÉOLOGO</h2>
+<p class="font-label-xs text-on-primary-container opacity-70 tracking-[0.2em] uppercase">Ledger N° 4821</p>
+<div class="mt-4 space-y-1.5">
+<p class="text-[9px] font-label-xs text-secondary-fixed/40 uppercase tracking-[0.15em] text-center">INSIGNIAS OBTENIDAS</p>
+<div class="flex justify-center gap-2">
+<div class="w-6 h-6 rounded-full bg-secondary-fixed/20 border border-secondary-fixed/30 flex items-center justify-center" title="Gold Badge">
+<span class="material-symbols-outlined text-[14px] text-secondary-fixed fill-1">workspace_premium</span>
+</div>
+<div class="w-6 h-6 rounded-full bg-slate-300/20 border border-slate-300/30 flex items-center justify-center" title="Silver Badge">
+<span class="material-symbols-outlined text-[14px] text-slate-300 fill-1">military_tech</span>
+</div>
+<div class="w-6 h-6 rounded-full bg-orange-800/20 border border-orange-800/30 flex items-center justify-center" title="Bronze Badge">
+<span class="material-symbols-outlined text-[14px] text-orange-400 fill-1">stars</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<nav class="flex-1 mt-6">
+<div class="space-y-1">
+<a class="flex items-center gap-3 px-6 py-3 bg-white/10 text-secondary-fixed font-bold border-r-4 border-secondary-fixed shadow-lg" href="#">
+<span class="material-symbols-outlined">auto_stories</span>
+<span class="font-label-sm text-label-sm uppercase">NOTICIAS</span>
+</a>
+<a class="flex items-center gap-3 px-6 py-3 text-white/60 hover:text-secondary-fixed hover:bg-white/5 transition-colors group" href="#">
+<span class="material-symbols-outlined">menu_book</span>
+<span class="font-label-sm text-label-sm uppercase">INVENTARIO</span>
+</a>
+<a class="flex items-center gap-3 px-6 py-3 text-white/60 hover:text-secondary-fixed hover:bg-white/5 transition-colors group" href="#">
+<span class="material-symbols-outlined">payments</span>
+<span class="font-label-sm text-label-sm uppercase">VENTAS</span>
+</a>
+<a class="flex items-center gap-3 px-6 py-3 text-white/60 hover:text-secondary-fixed hover:bg-white/5 transition-colors group" href="#">
+<span class="material-symbols-outlined">verified</span>
+<span class="font-label-sm text-label-sm uppercase">CERTIFICACIONES</span>
+</a>
+<a class="flex items-center gap-3 px-6 py-3 text-white/60 hover:text-secondary-fixed hover:bg-white/5 transition-colors group" href="#">
+<span class="material-symbols-outlined">gavel</span>
+<span class="font-label-sm text-label-sm uppercase">SUBASTA</span>
+</a>
+<a class="flex items-center gap-3 px-6 py-3 text-white/60 hover:text-secondary-fixed hover:bg-white/5 transition-colors group" href="#">
+<span class="material-symbols-outlined">mail</span>
+<span class="font-label-sm text-label-sm uppercase">MENSAJES</span>
+</a>
+</div>
+</nav>
+<div class="mt-auto p-6 space-y-3 bg-black/20">
+<a class="flex items-center gap-3 px-4 py-2 text-white/40 hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined text-[20px]">settings</span>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-[10px]">PREFERENCIAS</span>
+</a>
+</div>
+</aside>
+<!-- TOP APP BAR (Aligned with SCREEN_4 aesthetic) -->
+<header class="fixed top-0 left-0 right-0 z-40 bg-surface-container-low/50 backdrop-blur-sm border-b border-outline-variant/40 flex justify-between items-center h-16 px-gutter ml-[240px]">
+<div class="flex items-center gap-4">
+<span class="font-headline-lg text-[24px] font-bold text-primary italic tracking-tight">NUMISMATIC ARCHIVES</span>
+</div>
+<div class="flex items-center gap-6">
+<div class="relative w-64">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline">history_edu</span>
+<input class="w-full pl-10 pr-4 py-1.5 bg-white/50 border-b border-outline-variant focus:border-secondary transition-all outline-none font-body-md text-on-surface placeholder:italic" placeholder="Buscar en los anales..." type="text">
+</div>
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-on-surface-variant hover:text-primary transition-colors" data-icon="notifications">notifications</button>
+<button class="material-symbols-outlined text-on-surface-variant hover:text-primary transition-colors" data-icon="account_balance_wallet">account_balance_wallet</button>
+<div class="w-8 h-8 rounded-full border border-secondary-fixed/50 p-0.5 overflow-hidden">
+<img alt="User Portrait" class="w-full h-full rounded-full object-cover grayscale-[0.3]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDcI5QUwRWcSmjv85SV-Ol5IqZfh6iJwFTM-IP69oM2uuq-3eRtF7hCrm4irPWGCJBDZ9NG1onYTfp2Qe-tbjj2ZW0cHq3qjXT4DbFw954TKQWs5dgKxsRPYMQGPzcyEPtykWX2KGhMWw2f5PFlQMJu2ag_8uf6ILthyTggrVasACRMLOuHinAFbJg9Vr-gqH-n0nJNplmNikIss1s_KUog-DPrEWqNbAaQrFYFYcjBl50Zff6dyoLaZGbuwZYpSRTQ49RVWC6bLqQ">
+</div>
+</div>
+</div>
+</header>
+<!-- MAIN CONTENT WRAPPER -->
+<main class="ml-[240px] pt-16 flex justify-center max-w-max-width mx-auto px-gutter gap-8 pb-12 dotted-grid">
+<!-- CENTER FEED -->
+<section class="w-[680px] flex-shrink-0 flex flex-col gap-8 py-gutter">
+<!-- PUBLICAR BOX (Parchment Card Style) -->
+<div class="bg-[#f4ece1] border border-black/10 rounded-lg p-6 shadow-md relative overflow-hidden">
+<div class="corner-tab corner-tl"></div><div class="corner-tab corner-tr"></div><div class="corner-tab corner-bl"></div><div class="corner-tab corner-br"></div>
+<div class="flex gap-4">
+<div class="w-12 h-12 rounded-full border border-secondary-fixed/30 p-0.5 bg-white">
+<img alt="User" class="w-full h-full rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZprzIEv4tvNgWoohd9359XRhKwe9OGSzTDVRdROF68EPHm6NqSZU7HOqBPPR_cYwyYa49z6HQCwMPNwD5cSYxuHenrZ7KnQCJ4aXsj2aDrrQCmmL2eid3thvUWzXV4BRGxYkc1uYU1-EtO565DTMADX2Va058OZwk245qIW-B-Z3C05QmWzOdyuR-T9z3ZR2IYVqFXk_Eg8DnE6ReBWty0gV0QjCPAjCDRJ_y2dtg1uUZvy31fjoe7jzs3di5fW014w-4FYxWSo0">
+</div>
+<div class="flex-grow">
+<textarea class="w-full bg-white/40 border-none rounded-lg p-4 font-body-md text-body-md focus:ring-1 focus:ring-secondary/30 placeholder:text-on-surface-variant/50 resize-none min-h-[80px] italic" placeholder="¿Qué hay de nuevo en tu colección?"></textarea>
+</div>
+</div>
+<div class="flex justify-between items-center mt-4 pl-16">
+<div class="flex gap-4 text-on-surface-variant">
+<button class="hover:text-primary transition-colors"><span class="material-symbols-outlined text-[20px]" data-icon="photo">photo</span></button>
+<button class="hover:text-primary transition-colors"><span class="material-symbols-outlined text-[20px]" data-icon="attachment">attachment</span></button>
+<button class="hover:text-primary transition-colors"><span class="material-symbols-outlined text-[20px]" data-icon="sell">sell</span></button>
+</div>
+<button class="bg-primary text-secondary-fixed px-6 py-2 rounded-sm font-bold font-label-sm text-label-sm transition-all hover:brightness-110 shadow-sm uppercase tracking-widest">
+                    Publicar
+                </button>
+</div>
+</div>
+<!-- FEED POST: AUCTION -->
+<article class="bg-[#f4ece1] border-2 border-secondary/30 rounded-lg overflow-hidden flex flex-col shadow-lg relative">
+<div class="corner-tab corner-tl bg-secondary/10"></div><div class="corner-tab corner-tr bg-secondary/10"></div>
+<div class="p-6">
+<div class="flex justify-between">
+<div class="flex gap-4">
+<div class="w-12 h-12 rounded-full bg-white border border-black/5 p-0.5">
+<img alt="Auction House" class="w-full h-full rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwfcFJxc5aO3EioVKECN82tJc7l_bEud9cumEQ7GvQPz2NtWHvOqBCSxRSeLHLuyYQxV5Rn8EdibTmfHmmcGtSXvStKTLE3JExvbR0rSkjg2-irrchmzNv_N2noKbhGgxjM69UyNwmNZ8D5fS5CSnvYkMyFmh7YGgFlM5_XVzztAJ4Gg7fVMoIg_lxjSeU0plktwKI94fVN13DmwHt6dWa2lepI4PT7qMPvTO3hppxsgqBEAmvfV7oIlzIgPwym6VKQDaPkOlxtAQ">
+</div>
+<div>
+<div class="flex items-center gap-2">
+<h3 class="font-headline-md text-[18px] text-primary italic font-bold">Auction House Imperial</h3>
+<span class="ink-stamp text-[8px] scale-90">CURATOR</span>
+</div>
+<p class="text-outline font-label-sm text-label-sm uppercase tracking-tighter opacity-70">hace 2 horas • Subasta</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-secondary" data-icon="gavel" style="font-variation-settings: 'FILL' 1;">gavel</span>
+</div>
+<p class="mt-4 font-body-md text-body-md text-on-surface leading-relaxed border-l-2 border-secondary/20 pl-4 py-1 italic">
+                    Próxima Gran Subasta de ORO BIZANTINO. Incluyendo un raro Sólido de Justiniano I en condiciones excepcionales (MS 63). No pierdas la oportunidad de adquirir una pieza de historia pura.
+                </p>
+</div>
+<!-- Images Grid -->
+<div class="grid grid-cols-2 gap-0.5 bg-black/10 p-0.5">
+<div class="h-64 overflow-hidden bg-white/50">
+<img class="w-full h-full object-cover grayscale-[0.1] hover:grayscale-0 transition-all duration-500 cursor-zoom-in" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCEWVdL9ben8ezRiT4po6GK5pkX2kxqxpAq1UnXX183DX-Vln81faBcgPzjDP35JwYSRg1DGVQA0YmN9l5iJAFlRwDZgLuWK0eRG0quubk8JXNNs_ZXHx64iqGgG16msOIwFW3hAIXuMen9IvaN-kBpwIV60Ez9WK3rgoKbeE_W4nmokoKYWDyM8hW2zLhS6zRDS8Jc1B79rHl1qB0sXGQMowtWE71-kO2IOk3sIIXCvAv07D0r1og8_-2t5mh-oWKzKYRpnCtwqHE">
+</div>
+<div class="h-64 overflow-hidden bg-white/50">
+<img class="w-full h-full object-cover grayscale-[0.1] hover:grayscale-0 transition-all duration-500 cursor-zoom-in" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMM7m2EUFyQTN07hgKUWgKYvajyjigdo7xOmmVP2YvHwc6Py6vHY_zUJR76yK4qXDXp25DflArLSStJH_fu2P6weBoFOK4aeLxWlnPb3hHgva8-kTx2P1eApTrUL1vfaQhVhC7_dW1dsaTO56c3Th1_dpvEADsJxoV7u5FY1zuLqZ2oPRVTAVsQPY96_l4qHuuswydf2r9wCdUqM0RvwNrxCQH5xjbSK3QG_f4OEngEw-OKg2NkFGAWMX616DJDhofXVB6jLJndno">
+</div>
+</div>
+<div class="p-4 flex items-center justify-between bg-white/20 border-t border-black/5">
+<div class="flex gap-6 items-center">
+  <div class="flex items-center gap-4">
+    <div class="flex items-center gap-2 cursor-pointer hover:scale-105 transition-transform">
+      <div class="wax-seal-btn" title="Like">
+        <span class="material-symbols-outlined text-[16px] text-[#ffdf9c]" style="font-variation-settings: 'FILL' 1;">thumb_up</span>
+      </div>
+      <span class="font-label-sm text-xs opacity-70">42</span>
+    </div>
+    <div class="flex items-center gap-2 cursor-pointer hover:scale-105 transition-transform">
+      <div class="wax-seal-btn" title="Love">
+        <span class="material-symbols-outlined text-[16px] text-[#ffdf9c]" style="font-variation-settings: 'FILL' 1;">favorite</span>
+      </div>
+      <span class="font-label-sm text-xs opacity-70">18</span>
+    </div>
+    <div class="flex items-center gap-2 cursor-pointer hover:scale-105 transition-transform">
+      <div class="wax-seal-btn opacity-60 grayscale hover:opacity-100 hover:grayscale-0" title="Dislike">
+        <span class="material-symbols-outlined text-[16px] text-[#ffdf9c]" style="font-variation-settings: 'FILL' 1;">thumb_down</span>
+      </div>
+      <span class="font-label-sm text-xs opacity-70">2</span>
+    </div>
+  </div>
+  <button class="flex items-center gap-2 text-outline hover:text-primary transition-colors">
+    <span class="material-symbols-outlined text-[20px]" data-icon="chat_bubble">chat_bubble</span>
+    <span class="font-label-sm text-label-sm">8 Comentarios</span>
+  </button>
+</div>
+<button class="material-symbols-outlined text-outline hover:text-secondary transition-colors" data-icon="bookmark">bookmark</button>
+</div>
+</article>
+<!-- FEED POST: CERTIFIED -->
+<article class="bg-[#f4ece1] border border-black/10 rounded-lg overflow-hidden flex flex-col shadow-md relative">
+<div class="corner-tab corner-tl"></div><div class="corner-tab corner-tr"></div>
+<div class="p-6">
+<div class="flex justify-between">
+<div class="flex gap-4">
+<div class="w-12 h-12 rounded-full bg-white border border-black/5 p-0.5">
+<img alt="Expert" class="w-full h-full rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDvNLi2jh7ltrA1HiLpLx_W8wdTAUoHZ0f3n1uaI1VwG52gwMOog4m0duFbYMtnACEb-AsCWNBpowXRYmCGcbc5emUgFPZgpquHBsncG_eh-yc9PD7qo9Z5aB3rX3YWd7ydJqeKZP0go3K56qVbGt7TTK0Em1B7LZxuWvINUHDmRiDQaG8yAkSJbytFEcarRZ0x771ht7BfAI75SkteyAVZBXwYmheP0V7R5XPY48i2ACWcYhDYMgWZEovZ5RnhBzF14co9SnMfz3A">
+</div>
+<div>
+<div class="flex items-center gap-2">
+<h3 class="font-headline-md text-[18px] text-primary italic font-bold">Marco Aurelio V.</h3>
+<span class="ink-stamp text-[8px] scale-90 !text-tertiary !border-tertiary">CERTIFIER</span>
+</div>
+<p class="text-outline font-label-sm text-label-sm uppercase tracking-tighter opacity-70">hace 5 horas • Certificación</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-tertiary" data-icon="verified" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+<p class="mt-4 font-body-md text-body-md text-on-surface leading-relaxed border-l-2 border-tertiary/20 pl-4 py-1">
+                    Certificación completada: <span class="underline decoration-dotted">Dracma del Reino de Macedonia</span>, época de Alejandro Magno. Autenticidad 100% verificada bajo espectroscopia. Estado de conservación: <span class="font-bold">Extra Fine (XF)</span>.
+                </p>
+<div class="mt-4 p-3 bg-tertiary-container/5 border-l-4 border-tertiary rounded-r-lg flex items-center gap-3">
+<span class="material-symbols-outlined text-tertiary text-[20px]" data-icon="workspace_premium">workspace_premium</span>
+<span class="font-label-sm text-label-sm text-tertiary font-bold uppercase tracking-widest">REGISTRO ARCHIVAL: #MCD-9823-ALX</span>
+</div>
+</div>
+<div class="h-80 overflow-hidden bg-white/30 p-4">
+<div class="w-full h-full border border-black/5 shadow-inner overflow-hidden flex items-center justify-center">
+<img class="w-full h-full object-contain grayscale-[0.2] hover:grayscale-0 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDoxaDMtqwZ-8biv5X-kbOUnVKDyhv_6Fa6WpktPG-jd5r_2DWMhDVOcTAK4UiYVpCEnzjKqgS0t_Rw98M6-3mfK8hH3rjLs4XtotJwN9wr5zHc7j9aRaGngKJ2o_vXfhhoGhcwwjWsf8pvNXSWkWhD4wyyWbg2FBMEp_ejqAwaa6SbKDVKMPI7WA3261sjRYYQJM_UhQHqQyVeGrXZ3kaaP2kvnPXvol5AOFKSkYhMDSEy6jFovzU-c38z25n6wUb5mywdqKZQesw">
+</div>
+</div>
+<div class="p-4 flex items-center justify-between bg-white/20 border-t border-black/5">
+<div class="flex gap-6 items-center">
+  <div class="flex items-center gap-4">
+    <div class="flex items-center gap-2 cursor-pointer hover:scale-105 transition-transform">
+      <div class="wax-seal-btn" title="Like">
+        <span class="material-symbols-outlined text-[16px] text-[#ffdf9c]" style="font-variation-settings: 'FILL' 1;">thumb_up</span>
+      </div>
+      <span class="font-label-sm text-xs opacity-70">128</span>
+    </div>
+    <div class="flex items-center gap-2 cursor-pointer hover:scale-105 transition-transform">
+      <div class="wax-seal-btn" title="Love">
+        <span class="material-symbols-outlined text-[16px] text-[#ffdf9c]" style="font-variation-settings: 'FILL' 1;">favorite</span>
+      </div>
+      <span class="font-label-sm text-xs opacity-70">56</span>
+    </div>
+    <div class="flex items-center gap-2 cursor-pointer hover:scale-105 transition-transform">
+      <div class="wax-seal-btn opacity-60 grayscale hover:opacity-100 hover:grayscale-0" title="Dislike">
+        <span class="material-symbols-outlined text-[16px] text-[#ffdf9c]" style="font-variation-settings: 'FILL' 1;">thumb_down</span>
+      </div>
+      <span class="font-label-sm text-xs opacity-70">4</span>
+    </div>
+  </div>
+  <button class="flex items-center gap-2 text-outline hover:text-primary transition-colors">
+    <span class="material-symbols-outlined text-[20px]" data-icon="chat_bubble">chat_bubble</span>
+    <span class="font-label-sm text-label-sm">24 Comentarios</span>
+  </button>
+</div>
+<button class="material-symbols-outlined text-outline hover:text-secondary transition-colors" data-icon="bookmark">bookmark</button>
+</div>
+</article>
+</section>
+<!-- RIGHT SIDEBAR (Discovery / Trends) -->
+<aside class="w-[320px] flex-shrink-0 flex flex-col gap-6 py-gutter">
+<section class="bg-[#f4ece1] border border-black/10 rounded-lg p-6 shadow-md relative">
+<div class="corner-tab corner-tl"></div><div class="corner-tab corner-tr"></div>
+<h2 class="font-headline-md text-[20px] text-primary italic mb-4 border-b border-black/5 pb-2">Descubrir Tesoros</h2>
+<div class="flex flex-col gap-4">
+<div class="flex items-center gap-3 group cursor-pointer">
+<div class="w-12 h-12 bg-[#e8dfd1] rounded-full border border-black/5 overflow-hidden flex items-center justify-center p-1 shadow-inner">
+<img class="w-full h-full object-contain grayscale-[0.4] group-hover:grayscale-0 transition-all" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBNNsYCXjAogNAAbrdfvWhs_8TJBmToxtSOoYxvW22A3dAS08z1fq9MhMRcTeBXd6vtiWjtDxx753Bt9Ukum1Km_CavZn7FDM5nf39rix3Ll_gYikgko1dm4uNGQho1rj87iKhQpOlLmp-mZspnRftiOVgH9_z5t9F5ZvvCQpuBXq7V-q0r3cMTCrh75MJ5oMzTNfuQFdYSjMO1H2Qxe5nFBRBLhXbEH-vckpFKQ_rqMgVLAgEkeIH1ufH8HFKk5rLUhkjg6GIoqcI">
+</div>
+<div>
+<p class="font-bold text-on-surface text-sm italic group-hover:text-primary">8 Reales - Perú</p>
+<p class="font-label-xs text-outline uppercase tracking-wider text-[9px]">Colonial / Potosí</p>
+</div>
+</div>
+<div class="flex items-center gap-3 group cursor-pointer">
+<div class="w-12 h-12 bg-[#e8dfd1] rounded-full border border-black/5 overflow-hidden flex items-center justify-center p-1 shadow-inner">
+<img class="w-full h-full object-contain grayscale-[0.4] group-hover:grayscale-0 transition-all" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0msZ_edPINFNRv7Q4etL6TuUz9I9eYzNArysc5axHU1T3-IZNiwDht7FQstG-Js7OHnSrWfSMEMpwopTeqcLg4O_uMPF8zx79Qq1pCgTNJ87TLh1AIChqc-_F6FhBno3SCXx6eX2Pqej2DwbdtjW0p5LKweykhirMfKt-nYFdHz44M3_7D4XB6TKT6s525-Eoh1reM734rvucRjZ-lNLOWWC3iZYFCIVMrWdUosD5LavS22tAbdr7ve4LYbp_02fKVijyZT3smF4">
+</div>
+<div>
+<p class="font-bold text-on-surface text-sm italic group-hover:text-primary">Tetradracma</p>
+<p class="font-label-xs text-outline uppercase tracking-wider text-[9px]">Grecia / Atenas</p>
+</div>
+</div>
+</div>
+<button class="w-full mt-6 py-2 border border-black/10 text-outline font-label-sm text-[10px] hover:bg-white/40 transition-colors rounded-sm uppercase tracking-widest font-bold">
+                Ver más anales
+            </button>
+</section>
+<section class="bg-[#f4ece1] border border-black/10 rounded-lg p-6 shadow-md relative">
+<div class="corner-tab corner-tl"></div><div class="corner-tab corner-tr"></div>
+<h2 class="font-headline-md text-[20px] text-primary italic mb-4 border-b border-black/5 pb-2">Tendencias</h2>
+<div class="space-y-5">
+<div class="flex justify-between items-start">
+<div>
+<p class="font-label-xs text-white bg-error/80 px-1.5 inline-block mb-1 text-[9px] uppercase font-bold tracking-widest">En Vivo</p>
+<h4 class="font-bold text-on-surface text-sm">Subasta Bizancio</h4>
+<p class="font-label-sm text-outline text-[11px] italic">Lote #402: Sólido de Oro</p>
+</div>
+<span class="font-label-xs text-error font-bold">&lt; 1h</span>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h4 class="font-bold text-on-surface text-sm">#NumisExpo2024</h4>
+<p class="font-label-sm text-outline text-[11px]">15.4k menciones hoy</p>
+</div>
+</div>
+</div>
+</section>
+<footer class="px-2 opacity-60">
+<div class="flex flex-wrap gap-x-4 gap-y-2 mb-4">
+<a class="font-label-xs text-[9px] text-outline hover:text-primary uppercase" href="#">Terms of Escrow</a>
+<a class="font-label-xs text-[9px] text-outline hover:text-primary uppercase" href="#">Certification Standards</a>
+</div>
+<p class="font-label-xs text-[9px] text-primary uppercase tracking-[0.2em] mb-2 font-bold">NUMISMATIC ARCHIVAL SYSTEMS</p>
+<p class="font-label-xs text-[9px] text-outline">© 2024. Todos los derechos reservados.</p>
+</footer>
+</aside>
+</main>
+<script>
+    // Wax Seal Reaction Logic
+    document.querySelectorAll('.wax-seal-btn').forEach(btn => {
+        btn.addEventListener('click', function() {
+            this.style.transform = 'scale(0.9) rotate(-10deg)';
+            const textSpan = this.nextElementSibling;
+            const currentCount = parseInt(textSpan.innerText);
+            
+            setTimeout(() => {
+                this.style.transform = 'scale(1.1) rotate(5deg)';
+                if(!this.classList.contains('active')){
+                    this.classList.add('active');
+                    textSpan.innerText = (currentCount + 1) + ' Sellos';
+                    textSpan.classList.add('text-primary', 'font-bold');
+                } else {
+                    this.classList.remove('active');
+                    textSpan.innerText = (currentCount - 1) + ' Sellos';
+                    textSpan.classList.remove('text-primary', 'font-bold');
+                }
+            }, 150);
+        });
+    });
+</script>
+
+
+</body></html>

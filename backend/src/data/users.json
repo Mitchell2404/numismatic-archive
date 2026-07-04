@@ -1,0 +1,211 @@
+[
+  {
+    "id": "u1",
+    "username": "dr.alejandro.vega",
+    "name": "Dr. Alejandro Vega",
+    "email": "archivo@numismatica.com",
+    "passwordHash": "a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3",
+    "role": "usuario",
+    "roleLabel": "Curador Arqueólogo",
+    "status": "activo",
+    "rating": 4.9,
+    "coins": 24,
+    "certifications": 8,
+    "auctions": 3,
+    "badges": [
+      "workspace_premium",
+      "military_tech",
+      "stars"
+    ],
+    "joined": "Mar 2021",
+    "location": "Ciudad de México",
+    "bio": "Numismático especializado en monedas del período colonial latinoamericano. Curador principal del Archivo Soberano de Numismática."
+  },
+  {
+    "id": "u2",
+    "username": "maria.castillo",
+    "name": "Dra. María Castillo",
+    "email": "usuario@numismatica.com",
+    "passwordHash": "a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3",
+    "role": "usuario",
+    "roleLabel": "Archivista",
+    "status": "activo",
+    "rating": 4.7,
+    "coins": 15,
+    "certifications": 5,
+    "auctions": 7,
+    "badges": [
+      "workspace_premium",
+      "stars"
+    ],
+    "joined": "Jun 2022",
+    "location": "Buenos Aires",
+    "bio": "Archivista con especialización en monedas iberoamericanas del siglo XIX."
+  },
+  {
+    "id": "u3",
+    "username": "carlos.mendoza",
+    "name": "Carlos Mendoza",
+    "email": "carlos.mendoza@numismatica.com",
+    "passwordHash": null,
+    "role": "usuario",
+    "roleLabel": "Coleccionista",
+    "status": "activo",
+    "rating": 4.5,
+    "coins": 32,
+    "certifications": 12,
+    "auctions": 2,
+    "badges": [
+      "military_tech"
+    ],
+    "joined": "Ene 2020",
+    "location": "Lima",
+    "bio": "Coleccionista apasionado de monedas republicanas peruanas."
+  },
+  {
+    "id": "u4",
+    "username": "elena.reyes",
+    "name": "Elena Reyes",
+    "email": "elena.reyes@numismatica.com",
+    "passwordHash": null,
+    "role": "usuario",
+    "roleLabel": "Erudita",
+    "status": "inactivo",
+    "rating": 4.8,
+    "coins": 19,
+    "certifications": 6,
+    "auctions": 10,
+    "badges": [
+      "workspace_premium",
+      "military_tech",
+      "stars"
+    ],
+    "joined": "Sep 2021",
+    "location": "Madrid",
+    "bio": "Investigadora independiente de numismática medieval española."
+  },
+  {
+    "id": "u5",
+    "username": "jorge.luna",
+    "name": "Jorge Luna",
+    "email": "jorge.luna@numismatica.com",
+    "passwordHash": null,
+    "role": "usuario",
+    "roleLabel": "Numismático",
+    "status": "activo",
+    "rating": 4.3,
+    "coins": 8,
+    "certifications": 2,
+    "auctions": 4,
+    "badges": [
+      "stars"
+    ],
+    "joined": "Feb 2023",
+    "location": "Bogotá",
+    "bio": "Numismático aficionado con interés en monedas coloniales."
+  },
+  {
+    "id": "u6",
+    "username": "patricia.santos",
+    "name": "Patricia Santos",
+    "email": "patricia.santos@numismatica.com",
+    "passwordHash": null,
+    "role": "usuario",
+    "roleLabel": "Archivista",
+    "status": "activo",
+    "rating": 4.6,
+    "coins": 27,
+    "certifications": 9,
+    "auctions": 5,
+    "badges": [
+      "workspace_premium"
+    ],
+    "joined": "Abr 2022",
+    "location": "Santiago",
+    "bio": "Archivista y conservadora de colecciones históricas."
+  },
+  {
+    "id": "u7",
+    "username": "alistair.finch",
+    "name": "Dr. Alistair Finch",
+    "email": "certificador@numismatica.com",
+    "passwordHash": "a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3",
+    "role": "certificador",
+    "roleLabel": "Perito Certificador",
+    "status": "activo",
+    "rating": 4.95,
+    "coins": 0,
+    "certifications": 142,
+    "pending": 8,
+    "auctions": 0,
+    "badges": [
+      "workspace_premium",
+      "military_tech"
+    ],
+    "joined": "Nov 2019",
+    "location": "San Francisco",
+    "bio": "Perito certificador con más de 15 años de experiencia en autenticación numismática."
+  },
+  {
+    "id": "u8",
+    "username": "roberto.flores",
+    "name": "Mag. Roberto Flores",
+    "email": "admin@numismatica.com",
+    "passwordHash": "a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3",
+    "role": "admin",
+    "roleLabel": "Administrador",
+    "status": "activo",
+    "rating": 5,
+    "coins": 0,
+    "certifications": 0,
+    "auctions": 0,
+    "badges": [
+      "workspace_premium"
+    ],
+    "joined": "Ene 2019",
+    "location": "Ciudad de México",
+    "bio": "Administrador del Archivo Numismático Soberano."
+  },
+  {
+    "id": "u9",
+    "username": "carmen.lopez",
+    "name": "Ing. Carmen López",
+    "email": "carmen.lopez@numismatica.com",
+    "passwordHash": null,
+    "role": "certificador",
+    "roleLabel": "Perito Certificador",
+    "status": "activo",
+    "rating": 4.8,
+    "coins": 0,
+    "certifications": 97,
+    "pending": 3,
+    "auctions": 0,
+    "badges": [
+      "workspace_premium"
+    ],
+    "joined": "Mar 2020",
+    "location": "Barcelona",
+    "bio": "Ingeniera metalúrgica especializada en análisis de aleaciones históricas."
+  },
+  {
+    "id": "u10",
+    "username": "fumio.tanaka",
+    "name": "Dr. Fumio Tanaka",
+    "email": "fumio.tanaka@numismatica.com",
+    "passwordHash": null,
+    "role": "certificador",
+    "roleLabel": "Perito Certificador",
+    "status": "inactivo",
+    "rating": 4.7,
+    "coins": 0,
+    "certifications": 54,
+    "pending": 0,
+    "auctions": 0,
+    "badges": [
+      "military_tech"
+    ],
+    "joined": "Jul 2021",
+    "location": "Osaka",
+    "bio": "Especialista en numismática asiática y acuñaciones del período Meiji."
+  }
+]

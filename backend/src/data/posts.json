@@ -1,0 +1,77 @@
+[
+  {
+    "id": "POST-1781995150785",
+    "author": "Dr. Alejandro Vega",
+    "body": "Sello de Cera💯🦅 — con NGC — Certificaciones",
+    "imageUrl": "/api/images/posts/posts-1781995150641.png",
+    "tags": [
+      "NGC — Certificaciones"
+    ],
+    "likes": 8,
+    "favs": 1,
+    "comments": [
+      {
+        "id": 1781995169953,
+        "author": "Dr. Alejandro Vega",
+        "text": "Hola",
+        "time": "2026-06-20T22:39:29.953Z"
+      }
+    ],
+    "createdAt": "2026-06-20T22:39:10.785Z"
+  },
+  {
+    "id": "POST-1781940460842",
+    "author": "Dr. Alejandro Vega",
+    "body": "Post II. XD. Y las fijas???😂💎 — con Instituto Numismático Europeo, CoinVaultPRO",
+    "imageUrl": "/api/images/posts/posts-1781940460650.png",
+    "tags": [
+      "Instituto Numismático Europeo",
+      "CoinVaultPRO"
+    ],
+    "likes": 1,
+    "favs": 1,
+    "comments": [
+      {
+        "id": 1781940472735,
+        "author": "Dr. Alejandro Vega",
+        "text": "#AndreTroll",
+        "time": "2026-06-20T07:27:52.735Z"
+      }
+    ],
+    "createdAt": "2026-06-20T07:27:40.842Z"
+  },
+  {
+    "id": "POST-1781937274494",
+    "author": "Dr. Alejandro Vega",
+    "body": "🏛️Subida de Prueba. Post 1. Jose is black and Rodrigo is goblin.🦉🥇 — con Dr. Ernesto Villanueva, NGC — Certificaciones, Fundación Colón",
+    "imageUrl": "/api/images/posts/posts-1781937274214.png",
+    "tags": [
+      "Dr. Ernesto Villanueva",
+      "NGC — Certificaciones",
+      "Fundación Colón"
+    ],
+    "likes": 3,
+    "favs": 2,
+    "comments": [
+      {
+        "id": 1781937805152,
+        "author": "Dr. Alejandro Vega",
+        "text": "Coemtario 1",
+        "time": "2026-06-20T06:43:25.152Z"
+      },
+      {
+        "id": 1781937816157,
+        "author": "Dr. Alejandro Vega",
+        "text": "Comentario 1*",
+        "time": "2026-06-20T06:43:36.157Z"
+      },
+      {
+        "id": 1781937823106,
+        "author": "Dr. Alejandro Vega",
+        "text": "Prueba 3....",
+        "time": "2026-06-20T06:43:43.106Z"
+      }
+    ],
+    "createdAt": "2026-06-20T06:34:34.494Z"
+  }
+]

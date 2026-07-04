@@ -1,0 +1,32 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(Get-ChildItem \"C:\\\\Users\\\\Jose\\\\Desktop\\\\IHC\" -Force | ForEach-Object { $_.FullName })",
+      "PowerShell(Get-ChildItem \"C:\\\\Users\\\\Jose\\\\Desktop\" -Force | ForEach-Object { $_.Name })",
+      "WebFetch(domain:contribution.usercontent.google.com)",
+      "Bash(npm create *)",
+      "Bash(npm install *)",
+      "Bash(cd C:\\\\Users\\\\Jose\\\\Desktop\\\\IHC\\\\numismatic-archive\\\\src *)",
+      "Bash(npm run *)",
+      "mcp__stitch__get_screen",
+      "Bash(curl -s -L \"https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sXzAwMDY1MmRjN2Y3MDA2MTEwODE2ZGUyMzgzMmQzYjVjEgsSBxDH-bWOww8YAZIBIwoKcHJvamVjdF9pZBIVQhM1MjIyMTc3MTU1MTQyODI4Njcz&filename=&opi=89354086\" -o \"C:/Users/Jose/Desktop/IHC/stitch-screens/09-home.html\")",
+      "Bash(curl -s -L \"https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sXzAwMDY1MmRjN2YyNjFlMTAwNzc5YjA5NGIzMTk4YTAzEgsSBxDH-bWOww8YAZIBIwoKcHJvamVjdF9pZBIVQhM1MjIyMTc3MTU1MTQyODI4Njcz&filename=&opi=89354086\" -o \"C:/Users/Jose/Desktop/IHC/stitch-screens/07-ledger.html\")",
+      "Bash(curl -s -L \"https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sXzAwZDAzNGIxODc1NzQ4NzZiYTdlYjk3OTJlZGU0NThlEgsSBxDH-bWOww8YAZIBIwoKcHJvamVjdF9pZBIVQhM1MjIyMTc3MTU1MTQyODI4Njcz&filename=&opi=89354086\" -o \"C:/Users/Jose/Desktop/IHC/stitch-screens/06-sales.html\")",
+      "Bash(curl -s -L \"https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sXzAwMDY1MmRjOWU4ZGNkYzAwN2M0ZTJhYmZkMDJhNmMzEgsSBxDH-bWOww8YAZIBIwoKcHJvamVjdF9pZBIVQhM1MjIyMTc3MTU1MTQyODI4Njcz&filename=&opi=89354086\" -o \"C:/Users/Jose/Desktop/IHC/stitch-screens/05-certification.html\")",
+      "Bash(curl -s -L \"https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sXzAwMDY1MmRjN2YwODU0YzkwMjA3Yjg5ODRiMjJiYjUxEgsSBxDH-bWOww8YAZIBIwoKcHJvamVjdF9pZBIVQhM1MjIyMTc3MTU1MTQyODI4Njcz&filename=&opi=89354086\" -o \"C:/Users/Jose/Desktop/IHC/stitch-screens/03-auction.html\")",
+      "Bash(curl -s -L \"https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sXzI5MzI1N2I3Nzk4MDQ2MDBhNDE3MjhhMWRlYWY4ZWQ3EgsSBxDH-bWOww8YAZIBIwoKcHJvamVjdF9pZBIVQhM1MjIyMTc3MTU1MTQyODI4Njcz&filename=&opi=89354086\" -o \"C:/Users/Jose/Desktop/IHC/stitch-screens/04-messaging.html\")",
+      "Bash(npx tailwindcss *)",
+      "Bash(npm uninstall *)",
+      "Bash(python3 -c ' *)",
+      "Bash(node -e ' *)",
+      "PowerShell(Get-ChildItem -Path \"C:\\\\Users\\\\Jose\\\\Desktop\\\\IHC\\\\numismatic-archive\\\\src\" -Recurse -Force | Select-Object FullName | ForEach-Object { $_.FullName -replace [regex]::Escape\\(\"C:\\\\Users\\\\Jose\\\\Desktop\\\\IHC\\\\numismatic-archive\\\\\"\\), \"\" })",
+      "Bash(curl -sL \"https://lh3.googleusercontent.com/aida-public/AB6AXuDMSFsNHgT3SMkJNbKCoM5j9vUSwPtCBpWH0ljTadlBgcSxi91Md_VkVySOIL9KS8Rlkb-s5_jIJ1wAJxK61CSXfx94OZ37CZ4xQF01rezWu6DX9HRBFChHeahGPMZmgmZfOzk1hnuqSrnI8yY76-DY29p7lAHKPh2iBqvx0IKot6QtCicA3afq3bjqJbVT9ZtYVKOIwNwUrwmVv-blPwq1LAADKCJFtOloAv0BVNq0qh27DWgrNGaviQJcOKX_twHUvvjO9yWkjHM\" -o backend/public/images/coins/coin-01.png)",
+      "Bash(curl -sL \"https://lh3.googleusercontent.com/aida-public/AB6AXuDgGD0eUTnQJ8CzK7nJq5qai0FOGKaSpeUGxY5_rrKqUE2ciim0Y2XelhRqNdks7F5lgGHv6sBNeKW-GMUq8Ggt61SuouvCzBKg2a3QGFNOKO3HNyv-HwOn2AcDbUY6nQfpW2GRbFbRBo5iHvS2KzMNFmzrgBR3UlJbYcb0PvjjiFX01GE7pDkSrPlfkO5O-ZVDWgZf_xjP3c5QNBq-7PNfu8_6SLmEgeOK0HXiTBHoGhvCtQ9D1t0IHQ5szBHazB4G010-xCvj6Uo\" -o backend/public/images/coins/coin-02.png)",
+      "Bash(curl -sL \"https://lh3.googleusercontent.com/aida-public/AB6AXuAkcYh1bzEcJ2NUU-6T0c6nAD55fb3W_AVXt4guXAZD0uOW3jTzufwsdRE_j5DYxh_iStjIW2UYotejMHtB2BGiInbk5n0KSP7OJ36ktrKR1rBObAX3S5DRhKIeosMaaebGfWczj5rH0iN5ME83W8CABO4Y65HBBJKrxFlXVs5kg0eayLtOgrWYNbjJXuA7YytYmHZD--MSyP6gwrYkYdbe8zJH6BOzfPyQEdbdlz-lqnujuFF3gKw7umxL-pVrERgA9PLt1m3YUjg\" -o backend/public/images/coins/coin-03.png)",
+      "Bash(curl -sL \"https://lh3.googleusercontent.com/aida-public/AB6AXuCJMswU3vvcNlZ-h0s8WhynyPcSJp-FYDXjc7kWxBRQH6Ber30VRthj5wG-ltYGgkiiPQiXIZv--xYUVLcuYdx2mM9EX6LxCRUzN7yWsVzzFSXosFMCl8-SKo7uvGRVMPVjlINJI3zYKGuuZrmVmXVFy01rExX2Rca0BNZg2lKRPTZ39z7An4nEsUGPZ6J-0qCAFC0sJ6HdOlyxo4cqCLuASvaxPmVxUaJJNQ5zQbEd5dPFOVGwoaNDzMH3BNBhhTHhLWQQVcjVkog\" -o backend/public/images/coins/coin-04.png)",
+      "Bash(curl -sL \"https://lh3.googleusercontent.com/aida-public/AB6AXuB7iHyRTMYBLF8a2uNKsoiXKFxShpEj9SoGAQQYvi7lAdsr7XbHWQvecR_oZ4SoWsF9lMIs3eTGk_6Enf9Of3NCpQ08C20v5AlCQSByvxAxmwL4BR6aVhqRm5L_nJF9UKy_c7wTmrLNR2KJsLosWpW1EEzL7oUxfNBbpMtPZN7f0KU4HdQo9eD4f3_90kHtACUusY5g3SfWumF-TacRPNQikiXYMo5AmyYuthXJXznGoo7fy9qPoXscJV1pDfPRUWyBB6AgQUJWQik\" -o backend/public/images/mascots/guardian-grecia.png)",
+      "Bash(timeout 5 node src/index.js)",
+      "mcp__Claude_Preview__preview_start"
+    ]
+  }
+}

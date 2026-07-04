@@ -1,0 +1,19 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "numismatic-frontend",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "dev", "--prefix", "numismatic-archive"],
+      "port": 5173,
+      "autoPort": true
+    },
+    {
+      "name": "numismatic-backend",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "dev", "--prefix", "backend"],
+      "port": 3001,
+      "autoPort": true
+    }
+  ]
+}

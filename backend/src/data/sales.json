@@ -1,0 +1,122 @@
+[
+  {
+    "id": "VTA-1782015655806",
+    "coinId": "NA-713072",
+    "coinName": "Serie Riqueza y Orgullo del Perú — Machu Picchu",
+    "buyer": "Gustavo",
+    "salePrice": 999,
+    "date": "2026-06-21",
+    "status": "Completada",
+    "paymentMethod": "Transferencia Internacional",
+    "notes": "Hola",
+    "createdAt": "2026-06-21T04:20:55.806Z"
+  },
+  {
+    "id": "VTA-1781940146443",
+    "coinId": "NA-031053",
+    "coinName": "5 Libras — Tutankamón",
+    "buyer": "NEW FISI < CÓDIGO FISIANO",
+    "salePrice": 500,
+    "date": "2026-06-24",
+    "status": "Completada",
+    "paymentMethod": "Cheque Certificado",
+    "notes": "Factos!!!",
+    "createdAt": "2026-06-20T07:22:26.443Z"
+  },
+  {
+    "id": "VTA-1781827302085",
+    "coinId": "NA-764531",
+    "coinName": "50 Francos — Hércules",
+    "buyer": "Mr Beast",
+    "salePrice": 9500,
+    "date": "2026-06-22",
+    "status": "Pendiente",
+    "paymentMethod": "Efectivo",
+    "notes": "Prueba 8",
+    "createdAt": "2026-06-19T00:01:42.085Z"
+  },
+  {
+    "id": "VTA-1781827088114",
+    "coinId": "NA-713072",
+    "coinName": "Serie Riqueza y Orgullo del Perú — Machu Picchu",
+    "buyer": "Gustavo Cat",
+    "salePrice": 259,
+    "date": "2026-06-29",
+    "status": "Completada",
+    "paymentMethod": "Transferencia Internacional",
+    "notes": "Prueba 7",
+    "createdAt": "2026-06-18T23:58:08.115Z"
+  },
+  {
+    "id": "VTA-1781826465508",
+    "coinId": "NA-487745",
+    "coinName": "Escudo de Oro — Felipe IV",
+    "buyer": "Jose White",
+    "salePrice": 31420,
+    "date": "2026-06-19",
+    "status": "Completada",
+    "paymentMethod": "Depósito en Garantía",
+    "notes": "Prueba 6",
+    "createdAt": "2026-06-18T23:47:45.508Z"
+  },
+  {
+    "id": "VTA-1781826437350",
+    "coinId": "NA-795206",
+    "coinName": "Solidus Bizantino — Justiniano I",
+    "buyer": "Alex VM",
+    "salePrice": 479974,
+    "date": "2026-06-18",
+    "status": "Completada",
+    "paymentMethod": "Cheque Certificado",
+    "notes": "Prueba 5",
+    "createdAt": "2026-06-18T23:47:17.351Z"
+  },
+  {
+    "id": "VTA-1781826161666",
+    "coinId": "NA-638485",
+    "coinName": "Morgan Dollar — Carson City",
+    "buyer": "Mitchell",
+    "salePrice": 1324,
+    "date": "2026-06-26",
+    "status": "Completada",
+    "paymentMethod": "Transferencia Bancaria",
+    "notes": "Prueba 4",
+    "createdAt": "2026-06-18T23:42:41.666Z"
+  },
+  {
+    "id": "VTA-1781826133551",
+    "coinId": "NA-394899",
+    "coinName": "Sol de Plata — Gallito de las Rocas",
+    "buyer": "Alex479",
+    "salePrice": 220,
+    "date": "2026-06-25",
+    "status": "Completada",
+    "paymentMethod": "Efectivo",
+    "notes": "Prueba 3",
+    "createdAt": "2026-06-18T23:42:13.551Z"
+  },
+  {
+    "id": "VTA-1781826096120",
+    "coinId": "NA-764531",
+    "coinName": "50 Francos — Hércules",
+    "buyer": "Rodrigo Duende",
+    "salePrice": 955,
+    "date": "2026-06-28",
+    "status": "Cancelada",
+    "paymentMethod": "Cheque Certificado",
+    "notes": "Prueba 2",
+    "createdAt": "2026-06-18T23:41:36.120Z"
+  },
+  {
+    "id": "VTA-1781826063256",
+    "coinId": "NA-332913",
+    "coinName": "Tetradracma Ateniense — Lechuza Sagrada",
+    "buyer": "Jose Black",
+    "salePrice": 479,
+    "date": "2026-06-10",
+    "status": "Completada",
+    "paymentMethod": "Transferencia Internacional",
+    "notes": "Prueba 1",
+    "createdAt": "2026-06-18T23:41:03.256Z"
+  }
+]
