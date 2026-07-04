@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { BACKEND_URL } from '../utils/constants.js';
 import AppLayout from '../components/layout/AppLayout.jsx';
 import Modal from '../components/ui/Modal.jsx';
 import { useToast } from '../context/ToastContext.jsx';
@@ -336,7 +337,7 @@ export default function AuctionRoom() {
 
           {lots.map((lot, i) => {
             const isActive = activeLot?.id === lot.id;
-            const imgSrc = lot.imageUrl ? `http://localhost:3001${lot.imageUrl}` : null;
+            const imgSrc = lot.imageUrl ? `${BACKEND_URL}${lot.imageUrl}` : null;
             const matchesSearch = lotSearch &&
               (lot.coinName.toLowerCase().includes(lotSearch.toLowerCase()) ||
               lot.auctionHouse?.toLowerCase().includes(lotSearch.toLowerCase()));
@@ -474,7 +475,7 @@ export default function AuctionRoom() {
               >
                 {activeLot?.imageUrl
                   ? <img
-                      src={`http://localhost:3001${activeLot.imageUrl}`}
+                      src={`${BACKEND_URL}${activeLot.imageUrl}`}
                       alt={activeLot.coinName}
                       style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                     />

@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { BACKEND_URL } from '../utils/constants.js';
 import { createPortal } from 'react-dom';
 import Sidebar from '../components/layout/Sidebar.jsx';
 import { useToast } from '../context/ToastContext.jsx';
@@ -267,7 +268,7 @@ function MessageAttachment({ attachment, sent }) {
         marginBottom: 12,
       }}>
         <img
-          src={`http://localhost:3001${attachment.url}`}
+          src={`${BACKEND_URL}${attachment.url}`}
           alt="Adjunto"
           style={{ width: '100%', maxHeight: 280, objectFit: 'cover', display: 'block' }}
         />
@@ -280,7 +281,7 @@ function MessageAttachment({ attachment, sent }) {
       <div style={{ marginBottom: 12 }}>
         <audio
           controls
-          src={`http://localhost:3001${attachment.url}`}
+          src={`${BACKEND_URL}${attachment.url}`}
           style={{ width: '100%', height: 36, filter: sent ? 'invert(0.9)' : 'none' }}
         />
       </div>

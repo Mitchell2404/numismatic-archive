@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { BACKEND_URL } from '../utils/constants.js';
 import AppLayout from '../components/layout/AppLayout.jsx';
 import Modal from '../components/ui/Modal.jsx';
 import { useToast } from '../context/ToastContext.jsx';
@@ -419,7 +420,7 @@ export default function Certification() {
                     overflow: 'hidden',
                   }}>
                     <CoinImage
-                      src={selectedCoin.imageUrl ? `http://localhost:3001${selectedCoin.imageUrl}` : null}
+                      src={selectedCoin.imageUrl ? `${BACKEND_URL}${selectedCoin.imageUrl}` : null}
                       alt={selectedCoin.name}
                       style={{
                         width: '110%', height: '110%',

@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { BACKEND_URL } from '../utils/constants.js';
 import AppLayout from '../components/layout/AppLayout.jsx';
 import Modal from '../components/ui/Modal.jsx';
 import { useToast } from '../context/ToastContext.jsx';
@@ -91,7 +92,7 @@ function StatusBadge({ status }) {
 /* ── Pending Sale Card ───────────────────────────────────────────── */
 function PendingSaleCard({ sale, onView, onComplete, onCancel, coin }) {
   const [hov, setHov] = useState(false);
-  const imgSrc = coin?.imageUrl ? `http://localhost:3001${coin.imageUrl}` : null;
+  const imgSrc = coin?.imageUrl ? `${BACKEND_URL}${coin.imageUrl}` : null;
 
   return (
     <div
@@ -189,7 +190,7 @@ function PendingBtn({ label, icon, onClick, outlined = false }) {
 /* ── Table Row ───────────────────────────────────────────────────── */
 function SaleRow({ sale, onView, onCancel, coin, index }) {
   const [hov, setHov] = useState(false);
-  const imgSrc = coin?.imageUrl ? `http://localhost:3001${coin.imageUrl}` : null;
+  const imgSrc = coin?.imageUrl ? `${BACKEND_URL}${coin.imageUrl}` : null;
   const isCancelled = sale.status === 'Cancelada';
 
   return (
@@ -832,7 +833,7 @@ export default function Sales() {
               }}>
                 {getCoin(detailSale.coinId)?.imageUrl && (
                   <div style={{ width: 44, height: 44, borderRadius: '50%', overflow: 'hidden', flexShrink: 0, border: '1px solid rgba(0,0,0,0.08)' }}>
-                    <img src={`http://localhost:3001${getCoin(detailSale.coinId).imageUrl}`} alt={detailSale.coinName}
+                    <img src={`${BACKEND_URL}${getCoin(detailSale.coinId).imageUrl}`} alt={detailSale.coinName}
                       style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                   </div>
                 )}

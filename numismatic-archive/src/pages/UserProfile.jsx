@@ -1,4 +1,5 @@
 import React, { useMemo, useState, useEffect } from 'react';
+import { BACKEND_URL } from '../utils/constants.js';
 import { useParams, useNavigate } from 'react-router-dom';
 import AppLayout from '../components/layout/AppLayout.jsx';
 import CoinImage from '../components/ui/CoinImage.jsx';
@@ -450,7 +451,7 @@ function InventoryGrid({ coins = [], mobile }) {
           {filtered.map((coin, idx) => {
             const cert = coin.status === 'certified';
             const imgSrc = coin.imageUrl
-              ? `http://localhost:3001${coin.imageUrl}`
+              ? `${BACKEND_URL}${coin.imageUrl}`
               : COIN_IMGS[idx % COIN_IMGS.length];
             return (
               <div key={coin.id}
@@ -480,7 +481,7 @@ function InventoryGrid({ coins = [], mobile }) {
           {filtered.map((coin, idx) => {
             const cert = coin.status === 'certified';
             const imgSrc = coin.imageUrl
-              ? `http://localhost:3001${coin.imageUrl}`
+              ? `${BACKEND_URL}${coin.imageUrl}`
               : COIN_IMGS[idx % COIN_IMGS.length];
             return (
               <div key={coin.id} style={{ display:'flex', alignItems:'center', gap:12, padding:'10px 14px', backgroundColor:'#ffffff', border:`1px solid ${cert ? 'rgba(26,107,46,0.2)' : C.outlineVar}`, borderRadius:8, boxShadow:'0 1px 6px rgba(0,0,0,0.05)' }}>
