@@ -1,4 +1,5 @@
 import React, { useState, useMemo, useRef, useEffect } from 'react';
+import { BACKEND_URL } from '../utils/constants.js';
 import { Link, useNavigate } from 'react-router-dom';
 import AppLayout from '../components/layout/AppLayout.jsx';
 import { fetchActivity, fetchPosts, createPostAPI, uploadPostImage, updatePostAPI, addCommentAPI, fetchSummary, fetchCoins, fetchAuctions } from '../services/coinsService.js';
@@ -413,7 +414,7 @@ export default function Home() {
           time: new Date(p.createdAt).toLocaleDateString('es-PE', { day: '2-digit', month: 'short' }),
           category: 'Publicación',
           body: p.body,
-          image: p.imageUrl ? `http://localhost:3001${p.imageUrl}` : null,
+          image: p.imageUrl ? `${BACKEND_URL}${p.imageUrl}` : null,
           images: null,
           likes: p.likes || 0,
           favs: p.favs || 0,
@@ -625,7 +626,7 @@ export default function Home() {
         time: 'ahora',
         category: 'Publicación',
         body: created.body,
-        image: created.imageUrl ? `http://localhost:3001${created.imageUrl}` : null,
+        image: created.imageUrl ? `${BACKEND_URL}${created.imageUrl}` : null,
         images: null,
         likes: 0, favs: 0, comments: [],
       }, ...prev]);
@@ -1233,7 +1234,7 @@ export default function Home() {
                       <div style={{ display: 'flex', alignItems: 'center', gap: 12, cursor: 'pointer' }}>
                         <div style={{ width: 44, height: 44, backgroundColor: '#e8dfd1', borderRadius: '50%', border: '1px solid rgba(0,0,0,0.05)', overflow: 'hidden', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
                           {coin.imageUrl
-                            ? <img src={`http://localhost:3001${coin.imageUrl}`} alt={coin.name} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                            ? <img src={`${BACKEND_URL}${coin.imageUrl}`} alt={coin.name} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                             : <span className="material-symbols-outlined" style={{ fontSize: 20, color: DS.gold }}>toll</span>
                           }
                         </div>

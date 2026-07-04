@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect, useCallback } from 'react';
+import { BACKEND_URL } from '../utils/constants.js';
 import { useNavigate } from 'react-router-dom';
 import AppLayout from '../components/layout/AppLayout.jsx';
 import Modal from '../components/ui/Modal.jsx';
@@ -65,7 +66,7 @@ function CoinCard({ coin, isSelected, onClick, onDelete, onPrivate, onUnlock, is
   const [hovered, setHovered] = useState(false);
   const isPrivate = coin.private === true;
   // ← CAMBIO: la imagen ahora puede venir de imageUrl (servidor) o imagePreview (base64 temporal)
-  const imgSrc = coin.imagePreview || (coin.imageUrl ? `http://localhost:3001${coin.imageUrl}` : null);
+  const imgSrc = coin.imagePreview || (coin.imageUrl ? `${BACKEND_URL}${coin.imageUrl}` : null);
 
   return (
     <div
@@ -172,7 +173,7 @@ function CoinCard({ coin, isSelected, onClick, onDelete, onPrivate, onUnlock, is
 function CoinRow({ coin, isSelected, onClick, onDelete, onPrivate, onUnlock }) {
   const [hovered, setHovered] = useState(false);
   const isPrivate = coin.private === true;
-  const imgSrc = coin.imagePreview || (coin.imageUrl ? `http://localhost:3001${coin.imageUrl}` : null);
+  const imgSrc = coin.imagePreview || (coin.imageUrl ? `${BACKEND_URL}${coin.imageUrl}` : null);
 
   return (
     <div
@@ -310,7 +311,7 @@ function DetailPanel({ coin, onEdit, onSell, onAuction }) {
   }
 
   // ← CAMBIO: construye la URL de la imagen correctamente
-  const imgSrc = coin.imagePreview || (coin.imageUrl ? `http://localhost:3001${coin.imageUrl}` : coin.img);
+  const imgSrc = coin.imagePreview || (coin.imageUrl ? `${BACKEND_URL}${coin.imageUrl}` : coin.img);
 
   return (
     <aside style={{
@@ -1211,7 +1212,7 @@ export default function Ledger() {
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 20 }}>
             <div style={{ gridColumn: '1 / -1' }}>
               <ImageUploadField
-                preview={editModal.imagePreview || (editModal.imageUrl ? `http://localhost:3001${editModal.imageUrl}` : null)}
+                preview={editModal.imagePreview || (editModal.imageUrl ? `${BACKEND_URL}${editModal.imageUrl}` : null)}
                 onChange={(base64, file) => setEditModal(p => ({ ...p, imagePreview: base64, imageFile: file }))}
               />
             </div>
